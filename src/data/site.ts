@@ -8,10 +8,11 @@ export const site = {
   tagline: 'Digital Growth & Technology Partner for SMEs',
   positioning:
   'We help small and medium businesses grow, automate, and compete through digital technology.',
-  url: 'https://www.rdldigital.example',
+  url: 'https://rdldigitalagency.com',
   email: 'rdldigitalagency@gmail.com',
   phone: '+94 78 7808614',
   whatsapp: '+94 75 138 4800',
+  web3formsAccessKey: '940cc500-4850-4668-910e-69c68c49bd26',
   hours: [
   { days: 'Every day', time: '7:00 AM – 9:00 PM' }],
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AlertCircleIcon, CheckCircle2Icon, Loader2Icon } from 'lucide-react';
-import { budgetOptions, serviceOptions } from '../../data/site';
+import { budgetOptions, serviceOptions, site } from '../../data/site';
 import { Button } from '../ui/Button';
 
 interface FormState {
@@ -64,8 +64,25 @@ export function ContactForm() {
 
     setStatus('submitting');
     try {
-      // Replace with a POST to your API endpoint.
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      const formData = new FormData();
+      formData.append('access_key', site.web3formsAccessKey);
+      formData.append('subject', `New project inquiry from ${values.name}`);
+      formData.append('from_name', `${site.name} website`);
+      formData.append('replyto', values.email);
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('phone', values.phone || 'Not provided');
+      formData.append('company', values.company || 'Not provided');
+      formData.append('service', values.service);
+      formData.append('budget', values.budget);
+      formData.append('message', values.description);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.message || 'Submission failed');
       setStatus('success');
       setValues(initialState);
     } catch {
