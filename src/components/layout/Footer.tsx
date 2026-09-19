@@ -15,11 +15,8 @@ export function Footer() {
       <div className="shell py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)_1fr]">
           <div className="flex flex-col gap-5">
-            <Link to="/" className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-[9px] border border-accent/50 bg-accent/15">
-                <span className="h-2.5 w-2.5 rotate-45 bg-accent" />
-              </span>
-              <span className="text-[17px] font-semibold tracking-tight text-white">{site.name}</span>
+            <Link to="/" className="flex items-center">
+              <img src="/brand/logo-wordmark.png" alt={site.name} className="h-9 w-auto" />
             </Link>
             <p className="max-w-xs text-[14px] leading-relaxed text-mist-faint">{site.positioning}</p>
             <ul className="flex flex-col gap-2.5 text-[13.5px] text-mist-dim">

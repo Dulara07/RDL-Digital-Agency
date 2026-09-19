@@ -52,13 +52,10 @@ export function Navbar() {
           
           <Link
             to="/"
-            className="flex items-center gap-2.5"
+            className="flex items-center"
             aria-label={`${site.name} — home`}>
-            
-            <span className="relative flex h-8 w-8 items-center justify-center rounded-[9px] border border-accent/50 bg-accent/15">
-              <span className="h-2.5 w-2.5 rotate-45 bg-accent" />
-            </span>
-            <span className="text-[17px] font-semibold tracking-tight text-white">{site.name}</span>
+
+            <img src="/brand/logo-wordmark.png" alt={site.name} className="h-9 w-auto" />
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
