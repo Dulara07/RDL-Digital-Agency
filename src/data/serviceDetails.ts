@@ -60,17 +60,17 @@ export const serviceDetails: ServiceDetailContent[] = [
     body: 'We start with the commercial maths — margin, average order value, close rate — and work backwards to a channel plan that can actually hit the target. Then we instrument everything before spending.',
     pillars: [
     { title: 'Proposition first', body: 'Test the offer and message before scaling the spend behind it.' },
-    { title: 'Instrumented from day one', body: 'GA4, tag management and CRM tracking in place before launch.' },
+    { title: 'Tracking from day one', body: 'Every visitor and enquiry tracked properly before we spend a dollar on ads.' },
     { title: 'Managed to cost per lead', body: 'Weekly optimisation against pipeline quality, not clicks.' }]
 
   },
   capabilities: [
-  { name: 'Digital strategy', detail: 'Positioning, offer design and channel sequencing.', icon: TargetIcon },
-  { name: 'Paid advertising', detail: 'Google, Meta and LinkedIn campaigns with creative testing.', icon: MegaphoneIcon },
-  { name: 'Social media', detail: 'Content calendars, production and community management.', icon: UsersIcon },
-  { name: 'Content & email', detail: 'Articles, landing pages, nurture sequences and video.', icon: PenToolIcon },
-  { name: 'Analytics', detail: 'GA4, GTM, dashboards and attribution modelling.', icon: BarChart3Icon },
-  { name: 'Conversion optimisation', detail: 'Landing page testing and funnel improvement.', icon: TrendingUpIcon }],
+  { name: 'Digital strategy', detail: 'Working out who to target and what message to use.', icon: TargetIcon },
+  { name: 'Paid advertising', detail: 'Google, Facebook and LinkedIn ads, tested to find what works.', icon: MegaphoneIcon },
+  { name: 'Social media', detail: 'Planned posts, created content and community management.', icon: UsersIcon },
+  { name: 'Content & email', detail: 'Articles, landing pages, email sequences and video.', icon: PenToolIcon },
+  { name: 'Analytics', detail: 'Simple dashboards showing exactly which channels bring in customers.', icon: BarChart3Icon },
+  { name: 'Conversion optimisation', detail: 'Testing and improving pages to turn more visitors into enquiries.', icon: TrendingUpIcon }],
 
   process: [
   { step: '01', title: 'Commercial discovery', body: 'Margins, sales cycle, current performance and target.' },
@@ -115,18 +115,18 @@ export const serviceDetails: ServiceDetailContent[] = [
     headline: 'Fix the foundation, then compound',
     body: 'We audit crawlability, speed and structure first, rebuild the pages tied to your highest-margin services, then publish against demand we can verify.',
     pillars: [
-    { title: 'Technical first', body: 'Indexing, Core Web Vitals, structured data and site architecture.' },
+    { title: 'Technical first', body: 'Making sure Google can find, read and quickly load every page on your site.' },
     { title: 'Commercially ranked', body: 'Keyword priority set by margin, not by search volume alone.' },
     { title: 'Local advantage', body: 'Maps, reviews and location pages for service-area businesses.' }]
 
   },
   capabilities: [
-  { name: 'Technical audit', detail: 'Crawl, index, speed and structured data review.', icon: FileSearchIcon },
-  { name: 'Keyword strategy', detail: 'Intent mapping tied to services and margins.', icon: SearchIcon },
-  { name: 'Content architecture', detail: 'Service hubs, supporting articles and internal linking.', icon: ListChecksIcon },
-  { name: 'Local SEO', detail: 'Business profile, citations, reviews and location pages.', icon: MapPinIcon },
-  { name: 'Core Web Vitals', detail: 'Performance work on the pages that earn traffic.', icon: GaugeIcon },
-  { name: 'Reporting', detail: 'Rankings, sessions and enquiries in one monthly view.', icon: BarChart3Icon }],
+  { name: 'Technical check-up', detail: 'Making sure search engines can find, read and quickly load your site.', icon: FileSearchIcon },
+  { name: 'Keyword strategy', detail: 'Finding the exact words your customers type into Google.', icon: SearchIcon },
+  { name: 'Content planning', detail: 'Organising pages and articles so they support each other in search results.', icon: ListChecksIcon },
+  { name: 'Local SEO', detail: 'Business listing, reviews and location pages so nearby customers find you.', icon: MapPinIcon },
+  { name: 'Site Speed', detail: 'Performance work on the pages that earn traffic.', icon: GaugeIcon },
+  { name: 'Reporting', detail: 'Rankings, visits and enquiries in one monthly view.', icon: BarChart3Icon }],
 
   process: [
   { step: '01', title: 'Audit', body: 'Full technical, content and off-site review.' },
@@ -171,17 +171,17 @@ export const serviceDetails: ServiceDetailContent[] = [
     headline: 'Designed for the visitor, built for your team',
     body: 'We map the journeys that produce enquiries, design against them, and build on a stack that stays fast under real conditions. Editing is handed over with training and documentation.',
     pillars: [
-    { title: 'Conversion architecture', body: 'Page structure, proof and calls to action placed deliberately.' },
+    { title: 'Built to get enquiries', body: 'Page layout, trust signals and clear next steps placed deliberately.' },
     { title: 'Performance budget', body: 'Every page held to a measured load-time target.' },
     { title: 'Owned by you', body: 'Clear editing workflow, documentation and no lock-in.' }]
 
   },
   capabilities: [
-  { name: 'UX & UI design', detail: 'Journeys, wireframes and a reusable design system.', icon: MonitorSmartphoneIcon },
-  { name: 'Frontend engineering', detail: 'React builds with accessibility and SEO built in.', icon: GlobeIcon },
-  { name: 'CMS integration', detail: 'Editable content without breaking the design.', icon: SlidersHorizontalIcon },
-  { name: 'Performance', detail: 'Core Web Vitals, image strategy and caching.', icon: ZapIcon },
-  { name: 'Analytics setup', detail: 'Events, goals and dashboards from launch day.', icon: BarChart3Icon },
+  { name: 'Design', detail: 'Planning the pages and look and feel before anything is built.', icon: MonitorSmartphoneIcon },
+  { name: 'Development', detail: 'Built to load fast and work well for everyone, including search engines.', icon: GlobeIcon },
+  { name: 'Easy content editing', detail: 'Update text and images yourself without breaking the design.', icon: SlidersHorizontalIcon },
+  { name: 'Performance', detail: 'Making pages load fast, even on a slow phone connection.', icon: ZapIcon },
+  { name: 'Analytics setup', detail: 'Tracking set up from day one, so you can see how the site performs.', icon: BarChart3Icon },
   { name: 'Maintenance', detail: 'Hosting, updates, monitoring and support plans.', icon: RefreshCwIcon }],
 
   process: [
@@ -233,12 +233,12 @@ export const serviceDetails: ServiceDetailContent[] = [
 
   },
   capabilities: [
-  { name: 'Storefront build', detail: 'Headless or platform-based, tuned for speed.', icon: ShoppingBagIcon },
-  { name: 'Payments', detail: 'Local and international gateways with fraud controls.', icon: CreditCardIcon },
-  { name: 'Inventory sync', detail: 'POS, ERP and marketplace stock alignment.', icon: BoxIcon },
-  { name: 'Fulfilment', detail: 'Courier integration, tracking and returns flows.', icon: TruckIcon },
-  { name: 'Merchandising', detail: 'Campaign pages and collections your team controls.', icon: SlidersHorizontalIcon },
-  { name: 'Commerce analytics', detail: 'Cohorts, AOV, repeat rate and channel ROAS.', icon: BarChart3Icon }],
+  { name: 'Online store build', detail: 'A fast, easy-to-browse store, built the way that suits your catalogue.', icon: ShoppingBagIcon },
+  { name: 'Payments', detail: 'Local and international payment options, with fraud checks built in.', icon: CreditCardIcon },
+  { name: 'Stock sync', detail: 'Keeping stock counts the same everywhere you sell.', icon: BoxIcon },
+  { name: 'Delivery', detail: 'Courier hookup, order tracking and returns handling.', icon: TruckIcon },
+  { name: 'Merchandising', detail: 'Sale pages and collections your team controls.', icon: SlidersHorizontalIcon },
+  { name: 'Sales reporting', detail: 'Simple reports on what customers buy, and which ads pay off.', icon: BarChart3Icon }],
 
   process: [
   { step: '01', title: 'Commercial model', body: 'Margins, catalogue, logistics and channels.' },
@@ -255,7 +255,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   caseStudySlugs: ['orbit-retail-ecommerce-growth', 'vertex-foods-business-automation'],
   faqs: [
   { question: 'Shopify or custom?', answer: 'Whichever fits the catalogue and integrations. We recommend platform solutions where they fit and custom builds when inventory or pricing logic is unusual.' },
-  { question: 'Can you integrate our POS?', answer: 'Yes — if the POS exposes an API or export, we can sync stock, pricing and orders both ways.' },
+  { question: 'Can you connect our in-store checkout system?', answer: 'In most cases, yes — we can sync stock, pricing and orders both ways with your existing till or checkout system.' },
   { question: 'Do you run the ads too?', answer: 'Yes. The same team handles performance marketing, which keeps tracking and product feeds correct.' }]
 
 },
@@ -289,16 +289,16 @@ export const serviceDetails: ServiceDetailContent[] = [
 
   },
   capabilities: [
-  { name: 'Web applications', detail: 'Portals, internal tools and dashboards with role access.', icon: MonitorSmartphoneIcon },
-  { name: 'Mobile applications', detail: 'Cross-platform apps for field and customer use.', icon: SmartphoneIcon },
-  { name: 'CRM systems', detail: 'Pipeline, quotations and customer history in one place.', icon: UsersIcon },
-  { name: 'ERP & POS', detail: 'Inventory, purchasing, production and finance modules.', icon: DatabaseIcon },
-  { name: 'Automation', detail: 'Approvals, notifications and document generation.', icon: WorkflowIcon },
-  { name: 'AI assistants', detail: 'Document extraction, triage and internal knowledge tools.', icon: BotIcon }],
+  { name: 'Web tools', detail: 'Portals, internal tools and dashboards, with different access for different staff.', icon: MonitorSmartphoneIcon },
+  { name: 'Mobile apps', detail: 'Apps that work on any phone, for field staff and customers.', icon: SmartphoneIcon },
+  { name: 'Customer management', detail: 'Sales pipeline, quotes and customer history in one place.', icon: UsersIcon },
+  { name: 'Stock & finance systems', detail: 'Inventory, purchasing, production and finance in one system.', icon: DatabaseIcon },
+  { name: 'Automation', detail: 'Approvals, notifications and paperwork generated without manual steps.', icon: WorkflowIcon },
+  { name: 'AI assistants', detail: 'Tools that read documents, sort requests and answer common questions.', icon: BotIcon }],
 
   process: [
-  { step: '01', title: 'Process discovery', body: 'Shadow the team, document the real workflow.' },
-  { step: '02', title: 'Architecture', body: 'Data model, integrations, access and hosting plan.' },
+  { step: '01', title: 'Understanding your process', body: 'We shadow the team and document how work actually gets done.' },
+  { step: '02', title: 'Planning', body: 'How the system will be built, connected and hosted.' },
   { step: '03', title: 'Incremental build', body: 'Two-week releases with your team reviewing each.' },
   { step: '04', title: 'Adoption & support', body: 'Training, documentation, ongoing improvement.' }],
 
@@ -345,18 +345,18 @@ export const serviceDetails: ServiceDetailContent[] = [
 
   },
   capabilities: [
-  { name: 'Cloud provisioning', detail: 'AWS, Azure and Google Cloud environments.', icon: CloudIcon },
-  { name: 'Infrastructure', detail: 'Hosting, monitoring, backups and recovery drills.', icon: ServerIcon },
-  { name: 'Security', detail: 'Access control, patching, SSL and vulnerability review.', icon: LockIcon },
-  { name: 'Integrations', detail: 'Accounting, payments and third-party platform links.', icon: PlugIcon },
-  { name: 'Managed support', detail: 'Named contacts and agreed response windows.', icon: HeadphonesIcon },
-  { name: 'IT consulting', detail: 'Roadmaps, vendor review and budget planning.', icon: LinkIcon }],
+  { name: 'Cloud hosting', detail: 'Reliable hosting from major providers like AWS and Google Cloud.', icon: CloudIcon },
+  { name: 'Infrastructure', detail: 'Hosting, monitoring, backups and regular recovery checks.', icon: ServerIcon },
+  { name: 'Security', detail: 'Keeping your systems locked down, updated and checked for weak points.', icon: LockIcon },
+  { name: 'Integrations', detail: 'Connecting your accounting, payment and other business tools.', icon: PlugIcon },
+  { name: 'Managed support', detail: 'A named contact and agreed response times when something breaks.', icon: HeadphonesIcon },
+  { name: 'IT consulting', detail: 'Planning, vendor comparisons and budget advice.', icon: LinkIcon }],
 
   process: [
-  { step: '01', title: 'Audit', body: 'Systems, access, backups, licences and risks.' },
-  { step: '02', title: 'Remediate', body: 'Fix critical exposure and document everything.' },
-  { step: '03', title: 'Optimise', body: 'Right-size infrastructure and automate monitoring.' },
-  { step: '04', title: 'Support', body: 'Managed plan with reporting and quarterly review.' }],
+  { step: '01', title: 'Review', body: 'Systems, access, backups, licences and risks.' },
+  { step: '02', title: 'Fix', body: 'Fix the most critical risks and document everything.' },
+  { step: '03', title: 'Improve', body: 'Match your systems to what you actually need, and automate the checks.' },
+  { step: '04', title: 'Support', body: 'An ongoing plan with reporting and a quarterly review.' }],
 
   technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Cloudflare', 'CI/CD', 'Monitoring & Alerting'],
   benefits: [

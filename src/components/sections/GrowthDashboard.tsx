@@ -47,12 +47,12 @@ export function GrowthDashboard() {
               <div className="flex items-baseline justify-between">
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.14em] text-mist-faint">
-                    Attributed revenue
+                    Revenue from marketing
                   </p>
                   <p className="mt-1.5 font-display text-[36px] leading-none text-white">$286k</p>
                 </div>
                 <span className="rounded-full border border-aqua/30 bg-aqua/10 px-2.5 py-1 text-[12px] text-aqua">
-                  +41% YoY
+                  +41% vs last year
                 </span>
               </div>
 

@@ -1,9 +1,9 @@
 export const dashboardMetrics = [
 { id: 'visitors', label: 'Website visitors', value: '18,420', delta: '+38%', positive: true },
-{ id: 'leads', label: 'Qualified leads', value: '312', delta: '+52%', positive: true },
-{ id: 'conversion', label: 'Conversion rate', value: '4.8%', delta: '+1.2pt', positive: true },
-{ id: 'roas', label: 'ROAS', value: '3.7x', delta: '+0.9x', positive: true },
-{ id: 'revenue', label: 'Attributed revenue', value: '$286k', delta: '+41%', positive: true }];
+{ id: 'leads', label: 'Enquiries received', value: '312', delta: '+52%', positive: true },
+{ id: 'conversion', label: 'Visitors who became customers', value: '4.8%', delta: '+1.2pt', positive: true },
+{ id: 'roas', label: 'Return on ad spend', value: '3.7x', delta: '+0.9x', positive: true },
+{ id: 'revenue', label: 'Revenue from marketing', value: '$286k', delta: '+41%', positive: true }];
 
 
 /** Monthly trend series — replace with API data later. */

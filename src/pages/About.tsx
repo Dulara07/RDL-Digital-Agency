@@ -35,13 +35,13 @@ const timeline = [
 { year: '2019', title: 'Founded', body: 'Two consultants building websites for local manufacturers.' },
 { year: '2020', title: 'First projects', body: 'First e-commerce and marketing retainers, entirely referral-led.' },
 { year: '2022', title: 'Growth', body: 'Team of nine; dedicated performance marketing and design practices.' },
-{ year: '2024', title: 'Technology expansion', body: 'Custom software, ERP and automation practice established.' },
+{ year: '2024', title: 'Technology expansion', body: 'Custom software, business systems and automation practice established.' },
 { year: '2026', title: 'Today', body: 'A 24-person team serving SMEs across five industries and four regions.' }];
 
 
 const team = [
 { name: 'Amara Silva', role: 'Founder & Growth Strategy', focus: 'Positioning, channel strategy, analytics' },
-{ name: 'Dinesh Perera', role: 'Head of Engineering', focus: 'Architecture, ERP, integrations' },
+{ name: 'Dinesh Perera', role: 'Head of Engineering', focus: 'System design, business software, integrations' },
 { name: 'Nadia Haq', role: 'Design Director', focus: 'Brand, product design, design systems' },
 { name: 'Roshan Kumar', role: 'Head of Performance', focus: 'Paid media, SEO, conversion' },
 { name: 'Ishara Mendis', role: 'Delivery Lead', focus: 'Discovery, planning, client success' },

@@ -54,7 +54,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
 {
   id: 'software',
   question: 'Do you use business software today?',
-  helper: 'Accounting, CRM, inventory, POS or similar.',
+  helper: 'Accounting, customer records, stock tracking or similar tools.',
   options: [
   { label: 'Mostly spreadsheets', areas: ['software', 'automation'] },
   { label: 'A few disconnected tools', areas: ['software', 'automation', 'analytics'] },
@@ -90,7 +90,7 @@ export const assessmentAreas: AssessmentArea[] = [
 {
   id: 'seo',
   label: 'SEO',
-  description: 'Organic visibility for the terms your buyers actually search.',
+  description: 'Free visibility on Google for the words your customers actually search.',
   icon: SearchIcon
 },
 {
@@ -108,6 +108,6 @@ export const assessmentAreas: AssessmentArea[] = [
 {
   id: 'analytics',
   label: 'Analytics',
-  description: 'One reporting source of truth for commercial decisions.',
+  description: 'Clear reports that help you make decisions with confidence.',
   icon: BarChart3Icon
 }];

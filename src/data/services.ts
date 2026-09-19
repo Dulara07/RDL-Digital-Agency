@@ -49,7 +49,7 @@ export const services: Service[] = [
   slug: 'digital-marketing',
   name: 'Digital Marketing',
   group: 'digital-growth',
-  summary: 'Full-funnel strategy across search, social and paid channels, run against revenue targets.',
+  summary: 'A joined-up plan across search, social and paid ads, built around real sales goals — not just clicks.',
   icon: MegaphoneIcon,
   hasDetailPage: true
 },
@@ -57,7 +57,7 @@ export const services: Service[] = [
   slug: 'seo',
   name: 'Search Engine Optimization',
   group: 'digital-growth',
-  summary: 'Technical fixes, content depth and local presence that compound into durable organic demand.',
+  summary: 'Fixing what slows your website down and adding the content people search for, so more customers find you on Google for free.',
   icon: SearchIcon,
   hasDetailPage: true
 },
@@ -65,7 +65,7 @@ export const services: Service[] = [
   slug: 'social-media-marketing',
   name: 'Social Media Marketing',
   group: 'digital-growth',
-  summary: 'Always-on content calendars and community management built around how your audience buys.',
+  summary: 'Regular posts and replies to your audience, planned around how your customers actually decide to buy.',
   icon: UsersIcon,
   hasDetailPage: false
 },
@@ -73,7 +73,7 @@ export const services: Service[] = [
   slug: 'paid-advertising',
   name: 'Google & Meta Advertising',
   group: 'digital-growth',
-  summary: 'Paid acquisition with tight tracking, creative testing and budgets tied to cost per lead.',
+  summary: 'Google and Facebook ads tracked closely and tested, so your budget goes toward ads that actually bring in customers.',
   icon: TargetIcon,
   hasDetailPage: false
 },
@@ -81,7 +81,7 @@ export const services: Service[] = [
   slug: 'content-marketing',
   name: 'Content & Video Marketing',
   group: 'digital-growth',
-  summary: 'Articles, email programmes and short-form video that earn attention instead of buying all of it.',
+  summary: 'Articles, emails and short videos that earn people’s attention naturally, instead of only paying for it.',
   icon: PenToolIcon,
   hasDetailPage: false
 },
@@ -97,7 +97,7 @@ export const services: Service[] = [
   slug: 'analytics',
   name: 'Analytics & Reporting',
   group: 'digital-growth',
-  summary: 'GA4, tag management and dashboards so every decision has a number behind it.',
+  summary: 'Clear, simple reports so every decision is backed by real numbers, not guesswork.',
   icon: BarChart3Icon,
   hasDetailPage: false
 },
@@ -105,7 +105,7 @@ export const services: Service[] = [
   slug: 'web-development',
   name: 'Web Development',
   group: 'technology',
-  summary: 'Fast, accessible, search-ready websites engineered to convert and simple for your team to run.',
+  summary: 'Fast, easy-to-find websites that turn visitors into customers — and that your own team can update without a developer.',
   icon: GlobeIcon,
   hasDetailPage: true
 },
@@ -113,7 +113,7 @@ export const services: Service[] = [
   slug: 'ecommerce',
   name: 'E-commerce Development',
   group: 'technology',
-  summary: 'Storefronts, payments and fulfilment flows built to lift average order value and repeat rate.',
+  summary: 'Online stores with smooth payments and order handling, built to get customers spending more and coming back.',
   icon: ShoppingBagIcon,
   hasDetailPage: true
 },
@@ -135,9 +135,9 @@ export const services: Service[] = [
 },
 {
   slug: 'crm-erp',
-  name: 'CRM, ERP & POS',
+  name: 'Business Management Systems',
   group: 'technology',
-  summary: 'Customer, inventory and finance systems that replace spreadsheets and disconnected tools.',
+  summary: 'One system for customers, stock and finances (sometimes called CRM, ERP or POS) — instead of spreadsheets and disconnected tools.',
   icon: DatabaseIcon,
   hasDetailPage: false
 },
@@ -145,7 +145,7 @@ export const services: Service[] = [
   slug: 'business-automation',
   name: 'Business Automation',
   group: 'technology',
-  summary: 'Workflow automation and AI assistants that take repetitive admin off your team.',
+  summary: 'Automated tools and AI assistants that take repetitive paperwork and admin off your team’s plate.',
   icon: WorkflowIcon,
   hasDetailPage: false
 },
@@ -173,10 +173,10 @@ export const explorerTracks: ExplorerTrack[] = [
   outcome: 'Typical engagement: 90-day growth sprint, then a monthly retainer.',
   capabilities: [
   { name: 'Strategy', detail: 'Positioning, offer testing and channel plan mapped to your buying cycle.' },
-  { name: 'SEO', detail: 'Technical health, content architecture and local search visibility.' },
-  { name: 'Social Media', detail: 'Content calendars, creative production and community response.' },
-  { name: 'Paid Advertising', detail: 'Google, Meta and LinkedIn campaigns managed to cost per qualified lead.' },
-  { name: 'Analytics', detail: 'GA4, GTM and conversion tracking with one reporting source of truth.' },
+  { name: 'SEO', detail: 'Fixing technical issues, organising your content, and helping local customers find you on Google.' },
+  { name: 'Social Media', detail: 'Planned posts, created content and replying to your community.' },
+  { name: 'Paid Advertising', detail: 'Google, Facebook and LinkedIn ads managed to get the best return for every dollar spent.' },
+  { name: 'Analytics', detail: 'One simple report that shows what is working, with no data expertise needed to read it.' },
   { name: 'Content', detail: 'Articles, email sequences, landing pages and short-form video.' }]
 
 },
@@ -189,11 +189,11 @@ export const explorerTracks: ExplorerTrack[] = [
   icon: CodeIcon,
   outcome: 'Typical engagement: discovery, then 6–12 week build increments.',
   capabilities: [
-  { name: 'Web Applications', detail: 'Internal tools, portals and dashboards with role-based access.' },
-  { name: 'Mobile Apps', detail: 'Cross-platform apps for field staff, customers and partners.' },
-  { name: 'CRM', detail: 'Pipelines, quotations and customer history in one place.' },
-  { name: 'ERP', detail: 'Inventory, purchasing, production and finance visibility.' },
-  { name: 'APIs', detail: 'Integration layers that connect the tools you already pay for.' },
+  { name: 'Web Applications', detail: 'Internal tools and dashboards, with different access for different staff.' },
+  { name: 'Mobile Apps', detail: 'Apps that work on any phone, for field staff, customers and partners.' },
+  { name: 'Customer Management', detail: 'Customer details, quotes and sales history in one place instead of scattered spreadsheets.' },
+  { name: 'Stock & Finance', detail: 'One clear view of stock, purchasing, production and finances.' },
+  { name: 'Integrations', detail: 'Connecting the software you already use, so information flows between them automatically.' },
   { name: 'Automation', detail: 'Approvals, notifications and document generation without manual steps.' }]
 
 },
@@ -206,9 +206,9 @@ export const explorerTracks: ExplorerTrack[] = [
   icon: ServerCogIcon,
   outcome: 'Typical engagement: onboarding audit, then a managed support plan.',
   capabilities: [
-  { name: 'Cloud', detail: 'AWS, Azure and Google Cloud provisioning sized to actual usage.' },
-  { name: 'Infrastructure', detail: 'Hosting, backups, monitoring and disaster recovery drills.' },
-  { name: 'Security', detail: 'Access control, patching, SSL and vulnerability review.' },
+  { name: 'Cloud Hosting', detail: 'Reliable hosting from major providers, sized to what your business actually needs.' },
+  { name: 'Infrastructure', detail: 'Hosting, backups and regular checks that everything still works if something fails.' },
+  { name: 'Security', detail: 'Keeping your systems locked down, up to date and regularly checked for weak points.' },
   { name: 'Support', detail: 'Named contacts, agreed response times and maintenance windows.' },
   { name: 'Integration', detail: 'Payment gateways, accounting tools and third-party platforms.' }]
 

@@ -4,7 +4,7 @@ export const generalFaqs: Faq[] = [
 {
   question: 'What services does your agency provide?',
   answer:
-  'Two connected practices. Digital growth covers strategy, SEO, paid advertising, social, content, branding and analytics. Technology covers websites, e-commerce, custom software, mobile apps, CRM/ERP systems, automation, integrations, cloud and IT support.'
+  'Two things, really. First, helping people find and choose you — through your website, search engines, social media, ads, content and branding. Second, building the systems behind the scenes — websites, online stores, custom software, apps, and tools for managing customers, stock and finances — plus keeping it all running with cloud hosting and IT support.'
 },
 {
   question: 'Do you work with small businesses?',
@@ -29,12 +29,12 @@ export const generalFaqs: Faq[] = [
 {
   question: 'Do you provide custom software?',
   answer:
-  'We design and build custom web and mobile applications — internal tools, portals, CRM, ERP, POS and automation systems — when off-the-shelf software does not fit how you operate.'
+  'Yes. When ready-made software does not fit how your business works, we build web and mobile apps for you — internal tools, customer portals, systems for managing customers, stock or sales, and tools that automate repetitive tasks.'
 },
 {
   question: 'Can you integrate existing systems?',
   answer:
-  'Most of our work involves systems you already run. We integrate accounting software, payment gateways, POS, marketplaces, logistics providers and CRMs through their APIs, with monitoring on every connection.'
+  'Yes, and most projects involve this. We connect your accounting software, payment providers, point-of-sale systems, online marketplaces and delivery partners so they all talk to each other automatically, and we keep an eye on every connection to make sure it keeps working.'
 },
 {
   question: 'Do you offer monthly digital marketing?',

@@ -21,7 +21,7 @@ join(' ');
 
 const nodes = [
 { id: 'site', label: 'Website', icon: GlobeIcon, x: 8, y: 6 },
-{ id: 'crm', label: 'CRM', icon: UsersIcon, x: 72, y: 2 },
+{ id: 'crm', label: 'Customers', icon: UsersIcon, x: 72, y: 2 },
 { id: 'auto', label: 'Automation', icon: WorkflowIcon, x: 78, y: 54 },
 { id: 'cloud', label: 'Cloud', icon: CloudIcon, x: 2, y: 62 },
 { id: 'ai', label: 'AI', icon: BrainCircuitIcon, x: 42, y: 88 }];
@@ -112,7 +112,7 @@ export function HeroVisual() {
           {[
           { label: 'Visitors', value: '18.4k' },
           { label: 'Leads', value: '312' },
-          { label: 'ROAS', value: '3.7x' }].
+          { label: 'Ad Return', value: '3.7x' }].
           map((metric) =>
           <div key={metric.label}>
               <p className="text-[15px] font-medium text-white">{metric.value}</p>
@@ -153,9 +153,9 @@ export function HeroVisual() {
         transition={{ duration: 0.5, delay: 0.95 }}
         className="absolute bottom-[2%] right-0 hidden rounded-lg border border-line bg-ink-900/85 px-3 py-2.5 font-mono text-[10.5px] leading-relaxed text-mist-faint backdrop-blur-md sm:block">
         
-        <span className="text-aqua">POST</span> /api/leads
+        <span className="text-aqua">✓</span> New lead saved
         <br />
-        <span className="text-accent-soft">status</span>: 201 · 84ms
+        <span className="text-accent-soft">from</span> website form · 2s ago
       </motion.div>
     </div>);
 

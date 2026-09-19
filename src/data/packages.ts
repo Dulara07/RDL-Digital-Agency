@@ -8,11 +8,11 @@ export const packages: SolutionPackage[] = [
   idealFor: 'Businesses starting their digital journey or replacing an outdated website.',
   services: ['Brand basics', 'Website (up to 8 pages)', 'Local SEO setup', 'Analytics & tracking'],
   features: [
-  'Discovery workshop and sitemap',
-  'Conversion-focused website build',
-  'Google Business Profile optimisation',
-  'GA4 and conversion tracking',
-  '30 days post-launch support'],
+  'A planning session to map out your site',
+  'A website designed to turn visitors into customers',
+  'Your Google Business listing set up properly',
+  'Simple tracking so you can see what is working',
+  '30 days of support after launch'],
 
   featured: false
 },
@@ -36,13 +36,13 @@ export const packages: SolutionPackage[] = [
   name: 'Scale',
   tagline: 'Remove the operational ceiling.',
   idealFor: 'Businesses needing technology, automation and advanced digital systems.',
-  services: ['Custom software', 'Business automation', 'CRM / ERP', 'Integrations'],
+  services: ['Custom software', 'Business automation', 'Customer & stock systems', 'Connecting your tools'],
   features: [
-  'Process mapping and systems audit',
-  'Custom application development',
-  'Workflow and document automation',
-  'Third-party and payment integrations',
-  'Dedicated technical account lead'],
+  'A review of how your business runs today',
+  'Software built around your business',
+  'Automating paperwork and repetitive tasks',
+  'Connecting your payment and other tools',
+  'A dedicated technical contact for your account'],
 
   featured: false
 },
@@ -53,11 +53,11 @@ export const packages: SolutionPackage[] = [
   idealFor: 'Organisations undertaking customised technology and digital transformation.',
   services: ['Digital strategy', 'Platform engineering', 'Cloud & IT', 'AI solutions'],
   features: [
-  'Multi-quarter transformation roadmap',
-  'Platform architecture and governance',
-  'Cloud infrastructure and security',
-  'AI and data capability build-out',
-  'Executive reporting and SLAs'],
+  'A long-term plan, broken into clear phases',
+  'Planning how all your systems fit together',
+  'Secure, reliable hosting for everything',
+  'Building AI tools and putting your data to use',
+  'Clear reporting and guaranteed response times'],
 
   featured: false
 }];

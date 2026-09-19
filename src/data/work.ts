@@ -150,8 +150,8 @@ export const caseStudies: CaseStudy[] = [
   strategy:
   'We consolidated catalogue and inventory into one source of truth, mapped the highest-intent product journeys, and rebuilt checkout as a three-step flow with saved payment methods.',
   solution:
-  'A headless storefront connected to the POS, automated stock sync every fifteen minutes, a re-order module for returning customers, and a merchandising panel the marketing team runs without developer help.',
-  services: ['E-commerce Development', 'UX Design', 'POS Integration', 'Performance Marketing', 'Analytics'],
+  'A new online store connected to the in-store checkout system, stock counts updated automatically every fifteen minutes, an easy re-order option for returning customers, and a page-editing tool the marketing team runs without developer help.',
+  services: ['E-commerce Development', 'UX Design', 'Checkout Integration', 'Performance Marketing', 'Analytics'],
   technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'GA4', 'AWS'],
   results: [
   { label: 'Online revenue', value: '+41%' },
@@ -208,8 +208,8 @@ export const caseStudies: CaseStudy[] = [
   strategy:
   'We rewrote the proposition around specification and lead time, launched technical content for the terms engineers actually search, and layered paid search over the highest-intent queries.',
   solution:
-  'A technical content library, product specification landing pages, Google and LinkedIn campaigns, lead scoring in the CRM, and a single dashboard for cost per qualified enquiry.',
-  services: ['SEO', 'Paid Advertising', 'Content Marketing', 'CRM Setup', 'Analytics & Reporting'],
+  'A library of technical articles, product specification landing pages, Google and LinkedIn campaigns, an automatic way to rank incoming enquiries by quality, and a single dashboard for cost per qualified enquiry.',
+  services: ['SEO', 'Paid Advertising', 'Content Marketing', 'Customer Database Setup', 'Analytics & Reporting'],
   technologies: ['Google Ads', 'GA4', 'Google Tag Manager', 'LinkedIn Ads', 'HubSpot'],
   results: [
   { label: 'Qualified enquiries', value: '+52%' },
@@ -237,8 +237,8 @@ export const caseStudies: CaseStudy[] = [
   strategy:
   'We modelled the commercial workflow first and built margin calculation into quotation, so pricing decisions happened with live landed-cost data.',
   solution:
-  'A modular ERP covering quotations, costing, documentation and consignment tracking, with role-based access for the trade, finance and logistics teams.',
-  services: ['Discovery & Architecture', 'ERP Development', 'Document Automation', 'Integration', 'Support'],
+  'One connected system covering quotes, pricing, paperwork and shipment tracking, with different access levels for the sales, finance and logistics teams.',
+  services: ['Discovery & Planning', 'Business System Development', 'Document Automation', 'Integration', 'Support'],
   technologies: ['React', 'Node.js', 'MongoDB', 'REST APIs', 'Google Cloud'],
   results: [
   { label: 'Quotation turnaround', value: '−58%' },

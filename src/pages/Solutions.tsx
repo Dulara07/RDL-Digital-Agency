@@ -24,24 +24,24 @@ const solutions = [
   id: 'automation',
   name: 'Business Automation',
   problem: 'Skilled staff spending hours on data entry and chasing approvals.',
-  outcome: 'Rule-based work handled automatically, with exceptions escalated to a human.',
-  includes: ['Process mapping', 'Workflow automation', 'Document generation', 'AI assistants'],
+  outcome: 'Repetitive, predictable work handled automatically, with anything unusual sent to a real person.',
+  includes: ['Mapping how work gets done', 'Automating repetitive tasks', 'Auto-generated documents', 'AI assistants'],
   href: '/services/software-development'
 },
 {
   id: 'transformation',
   name: 'Digital Transformation',
   problem: 'Systems and data fragmented across tools nobody fully owns.',
-  outcome: 'A sequenced roadmap that consolidates systems without stopping the business.',
-  includes: ['Systems audit', 'Architecture', 'Phased migration', 'Change support'],
+  outcome: 'A clear, step-by-step plan that brings your systems together without stopping the business.',
+  includes: ['Reviewing what you have now', 'Planning how it fits together', 'Moving over in stages', 'Support through the change'],
   href: '/services/it-solutions'
 },
 {
   id: 'ecommerce',
   name: 'E-commerce',
   problem: 'Online sales exist but the unit economics do not work yet.',
-  outcome: 'A storefront tuned for conversion, order value and repeat purchase.',
-  includes: ['Storefront build', 'Payments & stock', 'Retention flows', 'Commerce analytics'],
+  outcome: 'An online store built to turn visitors into customers who spend more and come back.',
+  includes: ['Online store build', 'Payments & stock', 'Bringing customers back', 'Sales reporting'],
   href: '/services/ecommerce'
 },
 {
@@ -49,7 +49,7 @@ const solutions = [
   name: 'Custom Software',
   problem: 'Off-the-shelf tools force you to work against your own process.',
   outcome: 'Software shaped around the workflow your team already trusts.',
-  includes: ['Discovery', 'Web & mobile apps', 'CRM / ERP modules', 'Integrations'],
+  includes: ['Discovery', 'Web & mobile apps', 'Customer & business systems', 'Connecting your tools'],
   href: '/services/software-development'
 }];
 
