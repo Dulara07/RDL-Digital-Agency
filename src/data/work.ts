@@ -20,6 +20,35 @@ const IMG = {
 
 export const caseStudies: CaseStudy[] = [
 {
+  slug: 'smsverified-website-promotion-campaign',
+  client: 'SMSVerified',
+  industry: 'SaaS & Online Services',
+  projectType: 'Website Promotion',
+  category: 'marketing',
+  year: '2025',
+  image: '/work/smsverified.jpg',
+  summary:
+  'A focused website promotion push for an SMS and voice verification platform, aimed at driving new user registrations.',
+  challenge:
+  'SMSVerified had a working platform for temporary SMS and voice verification numbers but needed a dedicated push to bring in new registered users beyond its existing traffic.',
+  strategy:
+  'We treated the registration page as the thing being sold — not the platform in the abstract — and ran a focused promotion effort aimed squarely at people already close to signing up.',
+  solution:
+  'A short, focused user-registration drive: identifying where relevant traffic already gathers, promoting the platform directly to it, and tracking sign-ups back to the effort over a four-week engagement.',
+  services: ['Website Promotion', 'User Acquisition', 'Conversion-Focused Outreach'],
+  technologies: ['Digital Promotion', 'Analytics'],
+  results: [
+  { label: 'Client rating', value: '5.0/5' },
+  { label: 'Engagement', value: '4 weeks' },
+  { label: 'Client feedback', value: 'Exceptional' }],
+
+  gallery: [
+  { src: '/work/smsverified.jpg', caption: 'SMSVerified platform homepage' },
+  { src: '/work/smsverified-review.jpg', caption: 'Client review from the engagement' }],
+
+  liveUrl: 'https://smsverified.com'
+},
+{
   slug: 'us-media-video-editing-agency-website',
   client: 'US Media',
   industry: 'Creative Services',
