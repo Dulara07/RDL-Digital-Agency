@@ -20,6 +20,34 @@ const IMG = {
 
 export const caseStudies: CaseStudy[] = [
 {
+  slug: 'sakura-products-assessment-platform',
+  client: 'Sakura Products & Export (Pvt) Ltd',
+  industry: 'Food & Beverage',
+  projectType: 'Internal Assessment Platform',
+  category: 'software',
+  year: '2024',
+  image: '/work/sakura-assessment.jpg',
+  summary:
+  'A private, staff-only platform for Sakura Products & Export to run internal assessments and track performance across the business.',
+  challenge:
+  'Sakura Products & Export had no structured way to measure staff and process performance — reviews happened informally, with no central record of how different parts of the business were performing over time.',
+  strategy:
+  'Rather than relying on spreadsheets or paper-based reviews, we built a secure, internal-only web platform so assessments could be run consistently and every result kept in one place, ready to review at any time.',
+  solution:
+  'A password-protected staff portal where assessments are created and completed, with results feeding into a management dashboard that tracks performance across the business — built for internal use only, with encrypted logins to keep company data private.',
+  services: ['Custom Software Development', 'Secure Login System', 'Dashboard & Reporting'],
+  technologies: ['Web Application', 'Secure Authentication', 'Cloud Hosting'],
+  results: [
+  { label: 'Access', value: 'Staff-only login' },
+  { label: 'Assessments', value: 'Tracked centrally' },
+  { label: 'Reporting', value: 'One dashboard' }],
+
+  gallery: [
+  { src: '/work/sakura-assessment.jpg', caption: 'Secure staff login screen' }],
+
+  liveUrl: 'https://assessment.sakuraproducts.com/login'
+},
+{
   slug: 'smsverified-website-promotion-campaign',
   client: 'SMSVerified',
   industry: 'SaaS & Online Services',
