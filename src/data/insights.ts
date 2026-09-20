@@ -20,7 +20,7 @@ export const posts: Post[] = [
   readingTime: '7 min read',
   excerpt:
   'Most small businesses are told to publish more. In practice, the first wins usually come from fixing three technical issues and one page.',
-  image: "/d3768aa9-9dfa-4d1b-9ed5-e282fd26761a.jpg",
+  image: "/seo-for-smes-sri-lanka.jpg",
   author: 'Amara Silva',
   body: [
   {
@@ -65,7 +65,7 @@ export const posts: Post[] = [
   readingTime: '6 min read',
   excerpt:
   'Before you buy an AI tool, find the three tasks your team repeats daily. Automating those usually funds the rest of your technology roadmap.',
-  image: "/68955759-c1e2-4d67-bae6-a2b0af2eb8df.jpg",
+  image: "/business-automation-before-ai.jpg",
   author: 'Dinesh Perera',
   body: [
   {
@@ -102,7 +102,7 @@ export const posts: Post[] = [
   readingTime: '8 min read',
   excerpt:
   'AI is oversold and underused at the same time. These are the four applications we see paying back inside a quarter for SMEs.',
-  image: "/9227aced-2dee-4ed2-a9a1-3356005730f5.jpg",
+  image: "/practical-ai-for-small-teams.jpg",
   author: 'Amara Silva',
   body: [
   {

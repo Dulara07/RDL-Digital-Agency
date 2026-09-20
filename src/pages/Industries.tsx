@@ -12,8 +12,8 @@ export function Industries() {
   return (
     <>
       <Seo
-        title={`Industries We Serve | ${site.name}`}
-        description="Digital and technology solutions for retail, manufacturing, food and beverage, export and trading, hospitality, healthcare, education, logistics, construction, agriculture and startups." />
+        title={`Industries We Serve in Sri Lanka | ${site.name}`}
+        description="Digital marketing and technology solutions for retail, manufacturing, food and beverage, export and trading, hospitality, healthcare, education, logistics, construction, agriculture and startups across Sri Lanka." />
       
       <PageHero
         kicker="Industries"

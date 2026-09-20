@@ -26,16 +26,28 @@ export function InsightDetail() {
         description={post.excerpt}
         image={post.image}
         type="article"
-        structuredData={{
+        structuredData={[
+        {
           '@context': 'https://schema.org',
           '@type': 'Article',
           headline: post.title,
           datePublished: post.date,
           author: { '@type': 'Person', name: post.author },
-          publisher: { '@type': 'Organization', name: site.name },
+          publisher: { '@type': 'Organization', name: site.name, url: site.url },
+          image: `${site.url}${post.image}`,
           description: post.excerpt
-        }} />
-      
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+          { '@type': 'ListItem', position: 2, name: 'Insights', item: `${site.url}/insights` },
+          { '@type': 'ListItem', position: 3, name: post.title, item: `${site.url}/insights/${post.slug}` }]
+
+        }]} />
+
+
 
       <article className="pt-[104px] md:pt-[132px]">
         <header className="shell pb-10">
@@ -66,7 +78,7 @@ export function InsightDetail() {
           <Reveal className="overflow-hidden rounded-xl border border-line">
             <img
               src={post.image}
-              alt=""
+              alt={post.title}
               className="aspect-[3/2] w-full object-cover"
               loading="lazy" />
             

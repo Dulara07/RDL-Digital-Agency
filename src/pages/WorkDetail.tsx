@@ -23,8 +23,28 @@ export function WorkDetail() {
         title={`${study.client} — ${study.projectType} | ${site.name}`}
         description={study.summary}
         image={study.image}
-        type="article" />
-      
+        type="article"
+        structuredData={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: `${study.client} — ${study.projectType}`,
+          description: study.summary,
+          image: `${site.url}${study.image}`,
+          about: study.industry,
+          creator: { '@type': 'Organization', name: site.name, url: site.url }
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+          { '@type': 'ListItem', position: 2, name: 'Work', item: `${site.url}/work` },
+          { '@type': 'ListItem', position: 3, name: study.client, item: `${site.url}/work/${study.slug}` }]
+
+        }]} />
+
+
 
       <article>
         <header className="border-b border-line pt-[104px] md:pt-[132px]">

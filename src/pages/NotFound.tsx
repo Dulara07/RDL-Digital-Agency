@@ -9,8 +9,9 @@ export function NotFound() {
     <>
       <Seo
         title={`Page not found | ${site.name}`}
-        description="The page you were looking for does not exist." />
-      
+        description="The page you were looking for does not exist."
+        noindex />
+
       <section className="relative overflow-hidden">
         <AnimatedBackground variant="aurora" />
         <div className="shell relative flex min-h-[70vh] flex-col items-start justify-center gap-6 py-24">

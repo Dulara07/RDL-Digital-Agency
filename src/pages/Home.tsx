@@ -23,9 +23,9 @@ export function Home() {
   return (
     <>
       <Seo
-        title={`${site.name} | Digital Marketing, IT & Software Solutions for SMEs`}
-        description="We help SMEs grow with digital marketing, websites, custom software, IT solutions, automation and technology-driven business solutions." />
-      
+        title={`${site.name} | Digital Marketing & Software Development Agency in Sri Lanka`}
+        description="Digital marketing, SEO, website and software development, e-commerce and IT solutions for small and medium businesses across Sri Lanka — one accountable team for growth and technology." />
+
       <Hero />
       <TrustStrip />
       <ServicesSection />

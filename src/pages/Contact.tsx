@@ -10,8 +10,8 @@ export function Contact() {
   return (
     <>
       <Seo
-        title={`Contact | ${site.name}`}
-        description="Send a project inquiry or book a consultation. Tell us what you are trying to achieve and we will identify the right digital, software or IT solution." />
+        title={`Contact a Digital Marketing & IT Agency in Sri Lanka | ${site.name}`}
+        description="Send a project inquiry or book a consultation with a digital marketing and software development agency serving SMEs across Sri Lanka. We will identify the right digital, software or IT solution." />
       
       <PageHero
         kicker="Contact"

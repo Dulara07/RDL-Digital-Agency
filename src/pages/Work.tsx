@@ -12,8 +12,8 @@ export function Work() {
   return (
     <>
       <Seo
-        title={`Our Work | Case Studies | ${site.name}`}
-        description="Case studies across retail, manufacturing, food, trading, hospitality and professional services — websites, e-commerce, marketing programmes, custom software and brand work." />
+        title={`Our Work | Digital & Software Case Studies in Sri Lanka | ${site.name}`}
+        description="Case studies from Sri Lankan businesses across retail, manufacturing, food, trading, hospitality and professional services — websites, e-commerce, marketing programmes, custom software and brand work." />
       
       <PageHero
         kicker="Selected work"

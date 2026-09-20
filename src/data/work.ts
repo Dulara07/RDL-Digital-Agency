@@ -9,13 +9,13 @@ export const workFilters: {id: 'all' | WorkCategory;label: string;}[] = [
 
 
 const IMG = {
-  ecommerce: "/92c83378-3d28-4531-b6cb-80b5bef1145d.jpg",
-  automation: "/00d44a23-6dd1-46cc-bdd5-2bdf55de5c9a.jpg",
-  erp: "/04fabd70-3976-4fc8-89f3-f6123683b493.jpg",
-  marketing: "/2f2d7041-c6e6-4e49-b64d-cafde26573fb.jpg",
-  brand: "/0b36ee9d-1144-4af9-8128-a0414ad9b153.jpg",
-  website: "/d0d16d02-f7f4-4386-bacb-62f3471043c5.jpg",
-  logistics: "/0f31a67a-2362-4451-8a67-f62faee47773.jpg"
+  ecommerce: "/ecommerce-development-sri-lanka.jpg",
+  automation: "/business-automation-software.jpg",
+  erp: "/erp-crm-business-system.jpg",
+  marketing: "/digital-marketing-agency-sri-lanka.jpg",
+  brand: "/branding-creative-design.jpg",
+  website: "/website-development-sri-lanka.jpg",
+  logistics: "/logistics-software-solutions.jpg"
 };
 
 export const caseStudies: CaseStudy[] = [

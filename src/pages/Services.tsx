@@ -15,9 +15,9 @@ export function Services() {
   return (
     <>
       <Seo
-        title={`Services | ${site.name}`}
-        description="Digital marketing, SEO, web and e-commerce development, custom software, mobile apps, CRM/ERP, automation, cloud and IT solutions for small and medium businesses." />
-      
+        title={`Digital Marketing & Software Development Services | ${site.name}`}
+        description="Digital marketing, SEO, web and e-commerce development, custom software, mobile apps, CRM/ERP, automation, cloud and IT solutions for small and medium businesses in Sri Lanka." />
+
       <PageHero
         kicker="Services"
         title={

@@ -19,8 +19,8 @@ export function Insights() {
   return (
     <>
       <Seo
-        title={`Insights | ${site.name}`}
-        description="Practical writing on digital marketing, SEO, business technology, software, AI, SME growth and e-commerce." />
+        title={`Insights | Digital Marketing & Software Tips for Sri Lankan SMEs | ${site.name}`}
+        description="Practical writing on digital marketing, SEO, business technology, software, AI, SME growth and e-commerce for businesses in Sri Lanka." />
       
       <PageHero
         kicker="Insights"

@@ -45,8 +45,8 @@ export function Careers() {
   return (
     <>
       <Seo
-        title={`Careers | ${site.name}`}
-        description={`Open roles at ${site.name} — engineering, design and performance marketing positions working with SMEs across five industries.`} />
+        title={`Careers | Join ${site.name} in Sri Lanka`}
+        description={`Open roles at ${site.name} — engineering, design and performance marketing positions working with SMEs across Sri Lanka.`} />
       
       <PageHero
         kicker="Careers"

@@ -58,8 +58,8 @@ export function Solutions() {
   return (
     <>
       <Seo
-        title={`Solutions | ${site.name}`}
-        description="Outcome-based solutions for SMEs: growth programmes, business automation, digital transformation, e-commerce and custom software." />
+        title={`Digital & Technology Solutions for SMEs in Sri Lanka | ${site.name}`}
+        description="Outcome-based digital and technology solutions for SMEs in Sri Lanka: growth programmes, business automation, digital transformation, e-commerce and custom software." />
       
       <PageHero
         kicker="Solutions"

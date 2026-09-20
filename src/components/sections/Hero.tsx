@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 import { AnimatedBackground } from '../ui/AnimatedBackground';
 import { HeroVisual } from './HeroVisual';
 
-const trustPoints = ['Digital Growth', 'Technology', 'Innovation'];
+const trustPoints = ['Sri Lanka', 'Digital Marketing', 'Software Development'];
 
 export function Hero() {
   const prefersReduced = useReducedMotion();
@@ -39,13 +39,16 @@ export function Hero() {
               {...fade(0.06)}
               className="text-balance text-[clamp(2.4rem,5.6vw,4.3rem)] font-semibold leading-[1.02] tracking-tightest text-white">
               
-              We build digital experiences that{' '}
-              <span className="font-display font-normal italic text-accent-soft">grow businesses</span>.
+              Digital marketing and software that{' '}
+              <span className="font-display font-normal italic text-accent-soft">
+                grow Sri Lankan businesses
+              </span>
+              .
             </motion.h1>
 
             <motion.p {...fade(0.12)} className="max-w-xl text-[16px] leading-relaxed text-mist-dim md:text-[18px]">
-              Digital marketing, software and IT solutions designed to help SMEs grow faster, work
-              smarter, and compete globally.
+              Digital marketing, web development, software and IT solutions designed to help SMEs
+              across Sri Lanka grow faster, work smarter, and compete globally.
             </motion.p>
 
             <motion.div {...fade(0.18)} className="flex flex-col gap-3 sm:flex-row sm:items-center">

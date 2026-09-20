@@ -52,8 +52,8 @@ export function About() {
   return (
     <>
       <Seo
-        title={`About Us | ${site.name}`}
-        description={`${site.name} is a digital growth and technology partner for SMEs — combining marketing, software, IT and automation under one accountable team.`} />
+        title={`About Us | Digital Marketing & Software Agency in Sri Lanka | ${site.name}`}
+        description={`${site.name} is a digital marketing and software development agency for SMEs in Sri Lanka — combining marketing, software, IT and automation under one accountable team.`} />
       
       <PageHero
         kicker="About us"

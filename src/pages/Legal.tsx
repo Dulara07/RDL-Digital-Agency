@@ -83,8 +83,9 @@ function LegalPage({ title, kicker, blocks }: {title: string;kicker: string;bloc
     <>
       <Seo
         title={`${title} | ${site.name}`}
-        description={`${title} for ${site.legalName}. Placeholder content pending legal review.`} />
-      
+        description={`${title} for ${site.legalName}.`}
+        noindex />
+
       <PageHero
         kicker={kicker}
         title={title}

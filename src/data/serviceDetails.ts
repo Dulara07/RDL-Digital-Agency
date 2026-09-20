@@ -38,9 +38,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'digital-marketing',
   name: 'Digital Marketing',
-  metaTitle: 'Digital Marketing for SMEs | Strategy, Paid & Content',
+  metaTitle: 'Digital Marketing Agency in Sri Lanka | Strategy, SEO & Paid',
   metaDescription:
-  'Full-funnel digital marketing for small and medium businesses — strategy, paid advertising, social, content and analytics managed against revenue targets.',
+  'Digital marketing agency for small and medium businesses in Sri Lanka — strategy, SEO, paid advertising, social, content and analytics managed against revenue targets.',
   heroKicker: 'Digital Growth',
   heroHeadline: 'Marketing that answers to',
   heroHighlight: 'revenue, not impressions',
@@ -94,9 +94,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'seo',
   name: 'Search Engine Optimization',
-  metaTitle: 'SEO Services for SMEs | Technical, Content & Local Search',
+  metaTitle: 'SEO Services in Sri Lanka | Technical, Content & Local SEO',
   metaDescription:
-  'SEO for small and medium businesses — technical fixes, content architecture and local search visibility that compound into durable organic demand.',
+  'SEO services in Sri Lanka for small and medium businesses — technical fixes, content architecture and local search visibility that compound into durable organic demand.',
   heroKicker: 'Digital Growth',
   heroHeadline: 'Be the obvious answer when',
   heroHighlight: 'buyers search',
@@ -150,9 +150,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'web-development',
   name: 'Web Development',
-  metaTitle: 'Website Development for SMEs | Fast, Accessible, Conversion-Focused',
+  metaTitle: 'Website Development Company in Sri Lanka | RDL Digital Agency',
   metaDescription:
-  'Website development for small and medium businesses — fast, accessible, SEO-ready sites engineered to convert and simple for your team to maintain.',
+  'Website development company in Sri Lanka for small and medium businesses — fast, accessible, SEO-ready sites engineered to convert and simple for your team to maintain.',
   heroKicker: 'Technology',
   heroHeadline: 'A website that works as hard as',
   heroHighlight: 'your best salesperson',
@@ -206,9 +206,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'ecommerce',
   name: 'E-commerce Development',
-  metaTitle: 'E-commerce Development | Storefronts Built to Convert',
+  metaTitle: 'E-commerce Website Development in Sri Lanka | RDL Digital Agency',
   metaDescription:
-  'E-commerce development for SMEs — storefronts, payments, inventory sync and fulfilment flows built to lift conversion, order value and repeat purchase.',
+  'E-commerce website development in Sri Lanka for SMEs — storefronts, payments, inventory sync and fulfilment flows built to lift conversion, order value and repeat purchase.',
   heroKicker: 'Technology',
   heroHeadline: 'Storefronts built for',
   heroHighlight: 'repeat purchase',
@@ -262,9 +262,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'software-development',
   name: 'Custom Software Development',
-  metaTitle: 'Custom Software Development for SMEs | Web Apps, CRM, ERP',
+  metaTitle: 'Custom Software Development Company in Sri Lanka | CRM, ERP',
   metaDescription:
-  'Custom software development for small and medium businesses — web applications, CRM, ERP, POS and automation built around how your business actually works.',
+  'Custom software development company in Sri Lanka for small and medium businesses — web applications, CRM, ERP, POS and automation built around how your business actually works.',
   heroKicker: 'Technology',
   heroHeadline: 'Software built around the way',
   heroHighlight: 'your business works',
@@ -318,9 +318,9 @@ export const serviceDetails: ServiceDetailContent[] = [
 {
   slug: 'it-solutions',
   name: 'Cloud & IT Solutions',
-  metaTitle: 'Cloud & IT Solutions for SMEs | Infrastructure, Security, Support',
+  metaTitle: 'IT Solutions for SMEs in Sri Lanka | Cloud, Security & Support',
   metaDescription:
-  'Cloud and IT solutions for SMEs — infrastructure, security, integrations, monitoring and managed support with clear response commitments.',
+  'IT solutions for small and medium businesses in Sri Lanka — cloud infrastructure, security, integrations, monitoring and managed support with clear response commitments.',
   heroKicker: 'Technology',
   heroHeadline: 'Infrastructure that stays',
   heroHighlight: 'boring, on purpose',

@@ -14,6 +14,7 @@ import { ContactSection } from '../components/sections/ContactSection';
 import { CTASection } from '../components/sections/CTASection';
 import { getServiceDetail } from '../data/serviceDetails';
 import { getCaseStudies } from '../data/work';
+import { site } from '../data/site';
 import type { CaseStudy } from '../types';
 
 export function ServiceDetail() {
@@ -30,14 +31,27 @@ export function ServiceDetail() {
       <Seo
         title={detail.metaTitle}
         description={detail.metaDescription}
-        structuredData={{
+        structuredData={[
+        {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: detail.name,
           description: detail.metaDescription,
-          serviceType: detail.name
-        }} />
-      
+          serviceType: detail.name,
+          areaServed: 'LK',
+          provider: { '@type': 'Organization', name: site.name, url: site.url }
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${site.url}/services` },
+          { '@type': 'ListItem', position: 3, name: detail.name, item: `${site.url}/services/${detail.slug}` }]
+
+        }]} />
+
+
 
       <PageHero
         kicker={detail.heroKicker}

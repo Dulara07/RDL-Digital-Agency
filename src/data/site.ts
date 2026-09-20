@@ -5,9 +5,9 @@
 export const site = {
   name: 'RDL Digital Agency',
   legalName: 'RDL Digital Agency Pvt. Ltd.',
-  tagline: 'Digital Growth & Technology Partner for SMEs',
+  tagline: 'Digital Marketing & Software Development Agency for SMEs in Sri Lanka',
   positioning:
-  'We help small and medium businesses grow, automate, and compete through digital technology.',
+  'RDL Digital Agency is a digital marketing and software development agency serving small and medium businesses across Sri Lanka — combining SEO, web development, custom software and IT solutions under one accountable team.',
   url: 'https://rdldigitalagency.com',
   email: 'rdldigitalagency@gmail.com',
   phone: '+94 78 7808614',
@@ -17,13 +17,12 @@ export const site = {
   { days: 'Every day', time: '7:00 AM – 9:00 PM' }],
 
   founded: '2019',
-  social: [
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Facebook', href: 'https://facebook.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'YouTube', href: 'https://youtube.com' },
-  { label: 'WhatsApp', href: 'https://wa.me/94751384800' }]
-
+  /**
+   * Real social profile URLs go here once the accounts exist. Left empty
+   * rather than pointing at placeholder domains — Footer and the JSON-LD
+   * `sameAs` list both skip this cleanly when it's empty.
+   */
+  social: [] as { label: string; href: string }[]
 };
 
 export const primaryNav = [

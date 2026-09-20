@@ -5,10 +5,12 @@ import { site } from '../../data/site';
 interface SeoProps {
   title: string;
   description: string;
-  /** Optional JSON-LD structured data placeholder. */
-  structuredData?: Record<string, unknown>;
+  /** One or more JSON-LD structured data objects (e.g. Service + BreadcrumbList). */
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
   image?: string;
   type?: 'website' | 'article';
+  /** Keep this page out of search results (e.g. 404, thin/utility pages). */
+  noindex?: boolean;
 }
 
 function upsertMeta(selector: string, attr: 'name' | 'property', key: string, content: string) {
@@ -35,7 +37,14 @@ function upsertLink(rel: string, href: string) {
  * Route-level metadata. Reusable per page so titles, descriptions,
  * Open Graph, Twitter tags, canonical and structured data stay in sync.
  */
-export function Seo({ title, description, structuredData, image, type = 'website' }: SeoProps) {
+export function Seo({
+  title,
+  description,
+  structuredData,
+  image,
+  type = 'website',
+  noindex = false
+}: SeoProps) {
   const { pathname } = useLocation();
   const canonical = `${site.url}${pathname}`;
   const ogImage = image ?? `${site.url}/og-default.jpg`;
@@ -44,7 +53,12 @@ export function Seo({ title, description, structuredData, image, type = 'website
     document.title = title;
 
     upsertMeta('meta[name="description"]', 'name', 'description', description);
-    upsertMeta('meta[name="robots"]', 'name', 'robots', 'index, follow, max-image-preview:large');
+    upsertMeta(
+      'meta[name="robots"]',
+      'name',
+      'robots',
+      noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'
+    );
     upsertMeta('meta[property="og:title"]', 'property', 'og:title', title);
     upsertMeta('meta[property="og:description"]', 'property', 'og:description', description);
     upsertMeta('meta[property="og:type"]', 'property', 'og:type', type);
@@ -57,24 +71,41 @@ export function Seo({ title, description, structuredData, image, type = 'website
     upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', ogImage);
     upsertLink('canonical', canonical);
 
-    const scriptId = 'route-structured-data';
-    document.getElementById(scriptId)?.remove();
-    const payload =
-    structuredData ?? {
+    document.querySelectorAll('script[data-seo-jsonld]').forEach((el) => el.remove());
+    const defaultOrgSchema = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: site.name,
       url: site.url,
+      logo: `${site.url}/brand/favicon-192.png`,
       email: site.email,
       telephone: site.phone,
-      description: site.positioning
+      description: site.positioning,
+      areaServed: 'LK',
+      knowsAbout: [
+      'Digital Marketing',
+      'Search Engine Optimization',
+      'Web Development',
+      'E-commerce Development',
+      'Custom Software Development',
+      'IT Solutions'],
+
+      ...(site.social.length > 0 ?
+      { sameAs: site.social.map((item) => item.href) } :
+      {})
     };
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(payload);
-    document.head.appendChild(script);
-  }, [title, description, canonical, ogImage, type, structuredData]);
+    const payloads = structuredData ?
+    Array.isArray(structuredData) ? structuredData : [structuredData] :
+    [defaultOrgSchema];
+
+    payloads.forEach((payload, index) => {
+      const script = document.createElement('script');
+      script.dataset.seoJsonld = String(index);
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(payload);
+      document.head.appendChild(script);
+    });
+  }, [title, description, canonical, ogImage, type, structuredData, noindex]);
 
   return null;
 }
