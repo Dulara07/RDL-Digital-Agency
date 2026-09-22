@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { CustomCursor } from '../ui/CustomCursor';
+import { GoogleTagManager } from '../ui/GoogleTagManager';
 
 export function Layout({ enableCustomCursor = true }: {enableCustomCursor?: boolean;}) {
   const { pathname } = useLocation();
@@ -15,6 +16,7 @@ export function Layout({ enableCustomCursor = true }: {enableCustomCursor?: bool
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-ink text-mist">
+      <GoogleTagManager pathname={pathname} />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[130] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white">
