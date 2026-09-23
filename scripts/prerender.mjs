@@ -94,9 +94,16 @@ async function main() {
   });
   const origin = `http://localhost:${PORT}`;
 
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+  let browser;
+  try {
+    browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+  } catch (error) {
+    console.warn(`[prerender] Chrome unavailable; keeping the Vite SPA output: ${error.message}`);
+    await new Promise((resolve) => server.httpServer.close(resolve));
+    return;
+  }
 
   try {
     const pages = await crawl(origin, browser);
