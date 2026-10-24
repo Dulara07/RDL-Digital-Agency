@@ -30,17 +30,17 @@ import type { ExplorerTrack, Service, ServiceGroup } from '../types';
 export const serviceGroups: ServiceGroup[] = [
 {
   id: 'digital-growth',
-  label: 'Digital Growth',
-  kicker: 'Demand, visibility & brand',
+  label: 'Get more customers',
+  kicker: 'Marketing, advertising & branding',
   description:
-  'Campaigns, content and creative that put your business in front of the right buyers — and prove what it returned.'
+  'Help the right people find your business online, trust it and get in touch — with simple reports that show what each rupee brought back.'
 },
 {
   id: 'technology',
-  label: 'Technology & Software',
-  kicker: 'Systems, automation & IT',
+  label: 'Run your business more easily',
+  kicker: 'Websites, software & IT',
   description:
-  'Websites, platforms and internal systems that remove manual work and give you visibility over the business.'
+  'Websites, online shops and simple business tools that cut out paperwork and show you what is happening in your business.'
 }];
 
 
@@ -48,112 +48,126 @@ export const services: Service[] = [
 {
   slug: 'digital-marketing',
   name: 'Digital Marketing',
+  plainName: 'Bring in more customers online',
   group: 'digital-growth',
-  summary: 'A joined-up plan across search, social and paid ads, built around real sales goals — not just clicks.',
+  summary: 'We plan and run your Google, Facebook and website marketing as one plan, and judge it by enquiries and sales — not likes.',
   icon: MegaphoneIcon,
   hasDetailPage: true
 },
 {
   slug: 'seo',
   name: 'Search Engine Optimization',
+  plainName: 'Show up when people search on Google',
   group: 'digital-growth',
-  summary: 'Fixing what slows your website down and adding the content people search for, so more customers find you on Google for free.',
+  summary: 'When someone nearby searches for what you sell, your business appears near the top — without paying for every click.',
   icon: SearchIcon,
   hasDetailPage: true
 },
 {
   slug: 'social-media-marketing',
   name: 'Social Media Marketing',
+  plainName: 'Keep your Facebook and Instagram active',
   group: 'digital-growth',
-  summary: 'Regular posts and replies to your audience, planned around how your customers actually decide to buy.',
+  summary: 'Regular posts and quick replies to comments and messages, so your pages look alive and customers trust you.',
   icon: UsersIcon,
   hasDetailPage: false
 },
 {
   slug: 'paid-advertising',
   name: 'Google & Meta Advertising',
+  plainName: 'Run ads that bring in customers',
   group: 'digital-growth',
-  summary: 'Google and Facebook ads tracked closely and tested, so your budget goes toward ads that actually bring in customers.',
+  summary: 'Ads on Google, Facebook and Instagram, watched closely so your money only goes to the ads that bring enquiries.',
   icon: TargetIcon,
   hasDetailPage: false
 },
 {
   slug: 'content-marketing',
   name: 'Content & Video Marketing',
+  plainName: 'Posts, videos and emails people enjoy',
   group: 'digital-growth',
-  summary: 'Articles, emails and short videos that earn people’s attention naturally, instead of only paying for it.',
+  summary: 'Helpful articles, short videos and emails that keep your business in customers’ minds.',
   icon: PenToolIcon,
   hasDetailPage: false
 },
 {
   slug: 'branding',
   name: 'Branding & Creative',
+  plainName: 'Look professional and trustworthy',
   group: 'digital-growth',
-  summary: 'Positioning, identity systems and graphic design that make a small company look serious.',
+  summary: 'A logo, colours and designs that make your business look established — on signboards, social media and your website.',
   icon: PaletteIcon,
   hasDetailPage: false
 },
 {
   slug: 'analytics',
   name: 'Analytics & Reporting',
+  plainName: 'Know what is working',
   group: 'digital-growth',
-  summary: 'Clear, simple reports so every decision is backed by real numbers, not guesswork.',
+  summary: 'A simple monthly report in plain words: how many people found you, how many got in touch, and what it cost.',
   icon: BarChart3Icon,
   hasDetailPage: false
 },
 {
   slug: 'web-development',
   name: 'Web Development',
+  plainName: 'Get a website that brings enquiries',
   group: 'technology',
-  summary: 'Fast, easy-to-find websites that turn visitors into customers — and that your own team can update without a developer.',
+  summary: 'A fast website that works well on phones, shows up on Google, and that you can update yourself.',
   icon: GlobeIcon,
   hasDetailPage: true
 },
 {
   slug: 'ecommerce',
   name: 'E-commerce Development',
+  plainName: 'Sell your products online',
   group: 'technology',
-  summary: 'Online stores with smooth payments and order handling, built to get customers spending more and coming back.',
+  summary: 'An online shop where customers can browse, pay by card or bank transfer and arrange delivery — with every order in one place.',
   icon: ShoppingBagIcon,
   hasDetailPage: true
 },
 {
   slug: 'software-development',
   name: 'Custom Software',
+  plainName: 'Software made for how you work',
   group: 'technology',
-  summary: 'Web applications and business systems shaped around how your operation actually works.',
+  summary: 'When ready-made software doesn’t fit, we build simple tools around the way your business already runs.',
   icon: CodeIcon,
   hasDetailPage: true
 },
 {
   slug: 'mobile-apps',
   name: 'Mobile Applications',
+  plainName: 'Your own mobile app',
   group: 'technology',
-  summary: 'Cross-platform apps for field teams, customers and partners, connected to your core systems.',
+  summary: 'An app for your customers or staff that works on Android and iPhone, connected to the rest of your business.',
   icon: SmartphoneIcon,
   hasDetailPage: false
 },
 {
   slug: 'crm-erp',
   name: 'Business Management Systems',
+  plainName: 'Customers, stock and accounts in one place',
   group: 'technology',
-  summary: 'One system for customers, stock and finances (sometimes called CRM, ERP or POS) — instead of spreadsheets and disconnected tools.',
+  summary: 'Replace scattered spreadsheets and notebooks with one system for customers, stock and money (often called CRM, ERP or POS).',
   icon: DatabaseIcon,
   hasDetailPage: false
 },
 {
   slug: 'business-automation',
   name: 'Business Automation',
+  plainName: 'Cut down on repetitive paperwork',
   group: 'technology',
-  summary: 'Automated tools and AI assistants that take repetitive paperwork and admin off your team’s plate.',
+  summary: 'Invoices, reminders, reports and data entry done automatically, so your staff can spend their time on customers.',
   icon: WorkflowIcon,
   hasDetailPage: false
 },
 {
   slug: 'it-solutions',
   name: 'Cloud & IT Solutions',
+  plainName: 'Keep your computers, email and website running',
   group: 'technology',
-  summary: 'Cloud infrastructure, security, integrations and support with clear response commitments.',
+  summary: 'Reliable hosting, business email, backups, security and a support team you can call when something breaks.',
   icon: CloudIcon,
   hasDetailPage: true
 }];
@@ -162,20 +176,35 @@ export const services: Service[] = [
 export const servicesByGroup = (group: Service['group']) =>
 services.filter((service) => service.group === group);
 
+/**
+ * Contact-form "Service required" option to preselect for services that have
+ * no detail page, so "Discuss this" lands on a form that already knows why.
+ */
+export const enquiryOptionFor: Record<string, string> = {
+  'social-media-marketing': 'Digital Marketing',
+  'paid-advertising': 'Digital Marketing',
+  'content-marketing': 'Digital Marketing',
+  branding: 'Branding',
+  analytics: 'Digital Marketing',
+  'mobile-apps': 'Mobile App',
+  'crm-erp': 'Software Development',
+  'business-automation': 'Business Automation'
+};
+
 export const explorerTracks: ExplorerTrack[] = [
 {
   id: 'digital-marketing',
   label: 'Digital Marketing',
-  headline: 'Demand generation that answers to revenue',
+  headline: 'More enquiries and sales — measured in rupees, not likes',
   description:
-  'We build a channel mix around your margins and sales cycle, then run it as one programme instead of disconnected campaigns.',
+  'We pick the right mix of Google, Facebook, Instagram and your website for your business, and run it all as one plan.',
   icon: MegaphoneIcon,
-  outcome: 'Typical engagement: 90-day growth sprint, then a monthly retainer.',
+  outcome: 'Usually: a 3-month starter plan, then a simple monthly plan.',
   capabilities: [
-  { name: 'Strategy', detail: 'Positioning, offer testing and channel plan mapped to your buying cycle.' },
+  { name: 'Plan', detail: 'What to say, who to say it to, and where your customers actually spend time online.' },
   { name: 'SEO', detail: 'Fixing technical issues, organising your content, and helping local customers find you on Google.' },
   { name: 'Social Media', detail: 'Planned posts, created content and replying to your community.' },
-  { name: 'Paid Advertising', detail: 'Google, Facebook and LinkedIn ads managed to get the best return for every dollar spent.' },
+  { name: 'Paid Advertising', detail: 'Google, Facebook and LinkedIn ads managed to get the best return on every rupee spent.' },
   { name: 'Analytics', detail: 'One simple report that shows what is working, with no data expertise needed to read it.' },
   { name: 'Content', detail: 'Articles, email sequences, landing pages and short-form video.' }]
 
@@ -183,11 +212,11 @@ export const explorerTracks: ExplorerTrack[] = [
 {
   id: 'software-development',
   label: 'Software Development',
-  headline: 'Systems shaped around how you already operate',
+  headline: 'Simple tools built around how you already work',
   description:
-  'We map the real workflow first, then build only what removes friction — so adoption happens without a change-management programme.',
+  'We look at how your team works today, then build only what saves time — so everyone finds it easy to start using.',
   icon: CodeIcon,
-  outcome: 'Typical engagement: discovery, then 6–12 week build increments.',
+  outcome: 'Usually: a short planning stage, then delivered in stages every few weeks.',
   capabilities: [
   { name: 'Web Applications', detail: 'Internal tools and dashboards, with different access for different staff.' },
   { name: 'Mobile Apps', detail: 'Apps that work on any phone, for field staff, customers and partners.' },
@@ -200,11 +229,11 @@ export const explorerTracks: ExplorerTrack[] = [
 {
   id: 'it-solutions',
   label: 'IT Solutions',
-  headline: 'Infrastructure that stays boring, on purpose',
+  headline: 'Computers, email and websites that just keep working',
   description:
-  'Hosting, security and support handled with documented ownership, so nothing depends on one person remembering a password.',
+  'We look after hosting, backups, security and support, and write everything down — so nothing depends on one person remembering a password.',
   icon: ServerCogIcon,
-  outcome: 'Typical engagement: onboarding audit, then a managed support plan.',
+  outcome: 'Usually: a check of your current setup, then a monthly support plan.',
   capabilities: [
   { name: 'Cloud Hosting', detail: 'Reliable hosting from major providers, sized to what your business actually needs.' },
   { name: 'Infrastructure', detail: 'Hosting, backups and regular checks that everything still works if something fails.' },
@@ -217,46 +246,44 @@ export const explorerTracks: ExplorerTrack[] = [
 
 export const whyChooseUs = [
 {
-  title: 'Strategy First',
-  body: 'Every project starts with understanding the business — commercials, constraints and what success actually means.',
+  title: 'We listen first',
+  body: 'Before suggesting anything, we learn how your business works, who your customers are and what you need most.',
   icon: TargetIcon
 },
 {
-  title: 'One Partner',
-  body: 'Marketing, software, IT and technology under one roof, with one team accountable for the outcome.',
+  title: 'One team for everything',
+  body: 'Website, marketing, software and IT from one place — no chasing five different suppliers.',
   icon: LayersIcon
 },
 {
-  title: 'SME Focused',
-  body: 'Scopes, sequencing and pricing designed around real SME budgets instead of enterprise assumptions.',
+  title: 'Made for small businesses',
+  body: 'Start small with whatever pays back first, at a price that fits a small business budget.',
   icon: UsersIcon
 },
 {
-  title: 'Scalable Technology',
-  body: 'We build systems that survive growth — clean data models, documented code, no dead ends.',
+  title: 'Grows with you',
+  body: 'What we build today can be extended later, so you never have to start again from scratch.',
   icon: GaugeIcon
 },
 {
-  title: 'Data Driven',
-  body: 'Analytics from day one, so decisions are supported by measurable results rather than opinion.',
+  title: 'Plain-language reports',
+  body: 'You see real numbers — visitors, enquiries, sales — explained simply, without jargon.',
   icon: LineChartIcon
 },
 {
-  title: 'Long-Term Partnership',
-  body: 'We stay after launch — maintenance, iteration and quarterly planning are part of the relationship.',
+  title: 'We stay after launch',
+  body: 'We teach your team how to use what we build, and we are a phone call or WhatsApp message away afterwards.',
   icon: ShieldCheckIcon
 }];
 
 
 export const smeChallenges = [
-{ title: 'Low online visibility', detail: 'Buyers search, competitors appear, you do not.' },
-{ title: 'Manual business processes', detail: 'Spreadsheets, WhatsApp threads and re-typed data.' },
-{ title: 'Poor customer management', detail: 'Leads and history scattered across inboxes.' },
-{ title: 'Inefficient reporting', detail: 'Numbers arrive days late and rarely agree.' },
-{ title: 'Outdated websites', detail: 'Slow, hard to edit and built for a different decade.' },
-{ title: 'Unclear marketing performance', detail: 'Spend goes out, attribution never comes back.' },
-{ title: 'Repetitive administrative work', detail: 'Skilled staff doing copy-paste work daily.' },
-{ title: 'Disconnected business systems', detail: 'Every tool is an island with its own truth.' }];
+{ title: 'Customers can’t find us on Google', detail: 'People search for what you sell, and your competitors show up instead.' },
+{ title: 'Our website is old — or we don’t have one', detail: 'It looks dated, is slow on phones, or nobody knows how to update it.' },
+{ title: 'We pay for ads but don’t know if they work', detail: 'Money goes out every month, but you can’t tell which ads brought customers.' },
+{ title: 'Enquiries get lost', detail: 'Messages arrive on WhatsApp, phone, email and Facebook, and some never get a reply.' },
+{ title: 'Too much paperwork', detail: 'Staff spend hours typing invoices, copying data and making the same reports by hand.' },
+{ title: 'We don’t know our real numbers', detail: 'Sales, stock and cash figures take days to put together, and they rarely match.' }];
 
 
 export const capabilityIcons = {

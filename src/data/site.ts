@@ -42,13 +42,13 @@ export const stats = [
 { value: 5, suffix: '+', label: 'Industries served' }];
 
 
-export const clientLogos = [
-{ name: 'Halden & Co.', mark: 'H&' },
-{ name: 'Vertex Foods', mark: 'VF' },
-{ name: 'Orbit Retail', mark: 'OR' },
-{ name: 'Meridian Labs', mark: 'ML' },
-{ name: 'Casa Verde', mark: 'CV' },
-{ name: 'Northport Trade', mark: 'NT' }];
+/** Real clients shown in the trust strip; each links to its case study. */
+export const clients = [
+{ name: 'Sakura Products & Export', href: '/work/sakura-products-assessment-platform' },
+{ name: 'SMSVerified', href: '/work/smsverified-website-promotion-campaign' },
+{ name: 'US Media', href: '/work/us-media-video-editing-agency-website' },
+{ name: 'EICT', href: '/work/eict-online-ict-tutoring-platform' },
+{ name: 'RainbowEyes', href: '/work/rainboweyes-flower-boutique-website' }];
 
 
 export const footerColumns = [
@@ -102,8 +102,8 @@ export const serviceOptions = [
 
 
 export const budgetOptions = [
-'Under $1,000',
-'$1,000 – $5,000',
-'$5,000 – $10,000',
-'$10,000+',
+'Under Rs. 100,000',
+'Rs. 100,000 – 300,000',
+'Rs. 300,000 – 1,000,000',
+'Rs. 1,000,000+',
 'Not sure yet'];

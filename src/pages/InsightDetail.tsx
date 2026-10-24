@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { NotFound } from './NotFound';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { Reveal } from '../components/ui/Reveal';
@@ -15,7 +16,7 @@ export function InsightDetail() {
   const { slug = '' } = useParams();
   const post = getPost(slug);
 
-  if (!post) return <Navigate to="/insights" replace />;
+  if (!post) return <NotFound />;
 
   const related = posts.filter((item) => item.slug !== post.slug).slice(0, 2);
 
@@ -32,7 +33,7 @@ export function InsightDetail() {
           '@type': 'Article',
           headline: post.title,
           datePublished: post.date,
-          author: { '@type': 'Person', name: post.author },
+          author: { '@type': 'Organization', name: post.author, url: site.url },
           publisher: { '@type': 'Organization', name: site.name, url: site.url },
           image: `${site.url}${post.image}`,
           description: post.excerpt
@@ -58,7 +59,7 @@ export function InsightDetail() {
             <ArrowLeftIcon className="h-3.5 w-3.5" aria-hidden="true" />
             All insights
           </Link>
-          <p className="mt-8 flex flex-wrap items-center gap-2 text-[11.5px] uppercase tracking-[0.14em] text-mist-faint">
+          <p className="mt-8 flex flex-wrap items-center gap-2 text-[12px] uppercase tracking-[0.14em] text-mist-faint">
             <span className="text-accent-soft">{post.category}</span>
             <span aria-hidden="true">·</span>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -103,7 +104,7 @@ export function InsightDetail() {
         </div>
 
         <section aria-labelledby="related-heading" className="shell border-t border-line py-14">
-          <h2 id="related-heading" className="text-[11px] uppercase tracking-[0.18em] text-mist-faint">
+          <h2 id="related-heading" className="text-[12px] uppercase tracking-[0.18em] text-mist-faint">
             Keep reading
           </h2>
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-8">
@@ -117,7 +118,7 @@ export function InsightDetail() {
       <CTASection
         eyebrow="Put it to work"
         title="Want help applying this to your business?"
-        primaryLabel="Start a Conversation" />
+        primaryLabel="Start a Project" />
       
     </>);
 

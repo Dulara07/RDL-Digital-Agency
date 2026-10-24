@@ -13,6 +13,9 @@ export function Testimonials() {
   const move = (direction: 1 | -1) =>
   setIndex((current) => (current + direction + testimonials.length) % testimonials.length);
 
+  // Hidden until real client quotes are added in data/testimonials.ts.
+  if (!active) return null;
+
   return (
     <section aria-labelledby="testimonials-heading" className="relative border-y border-line">
       <div className="shell py-20 md:py-28">
@@ -20,7 +23,7 @@ export function Testimonials() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <h2
               id="testimonials-heading"
-              className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent-soft">
+              className="text-[12px] font-medium uppercase tracking-[0.2em] text-accent-soft">
               
               In their words
             </h2>

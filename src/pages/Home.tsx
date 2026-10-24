@@ -2,23 +2,17 @@ import React from 'react';
 import { Seo } from '../components/ui/Seo';
 import { Hero } from '../components/sections/Hero';
 import { TrustStrip } from '../components/sections/TrustStrip';
-import { ServicesSection } from '../components/sections/ServicesSection';
-import { ServiceExplorer } from '../components/sections/ServiceExplorer';
+import { GoalPicker } from '../components/sections/GoalPicker';
 import { ProblemSolution } from '../components/sections/ProblemSolution';
-import { IndustriesSection } from '../components/sections/IndustriesSection';
-import { WhyChooseUs } from '../components/sections/WhyChooseUs';
-import { ProcessTimeline } from '../components/sections/ProcessTimeline';
 import { WorkSection } from '../components/sections/WorkSection';
-import { TechnologySection } from '../components/sections/TechnologySection';
-import { GrowthDashboard } from '../components/sections/GrowthDashboard';
 import { Testimonials } from '../components/sections/Testimonials';
-import { Packages } from '../components/sections/Packages';
 import { FaqSection } from '../components/sections/FaqSection';
-import { InsightsSection } from '../components/sections/InsightsSection';
 import { AssessmentWizard } from '../components/sections/AssessmentWizard';
 import { CTASection } from '../components/sections/CTASection';
 import { site } from '../data/site';
 
+// The homepage speaks to owners, not marketers: plain goals first, then proof.
+// The full service list, glossary, process and packages live on /services.
 export function Home() {
   return (
     <>
@@ -28,20 +22,12 @@ export function Home() {
 
       <Hero />
       <TrustStrip />
-      <ServicesSection />
-      <ServiceExplorer />
+      <GoalPicker />
       <ProblemSolution />
-      <IndustriesSection limit={8} />
-      <WhyChooseUs />
-      <ProcessTimeline />
       <WorkSection limit={4} />
-      <TechnologySection />
-      <GrowthDashboard />
       <Testimonials />
-      <Packages />
       <AssessmentWizard />
       <FaqSection />
-      <InsightsSection />
       <CTASection />
     </>);
 

@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { AlertCircleIcon, CheckCircle2Icon, Loader2Icon } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { AlertCircleIcon, CheckCircle2Icon, Loader2Icon, SparklesIcon } from 'lucide-react';
 import { budgetOptions, serviceOptions, site } from '../../data/site';
+import { assessmentAreas } from '../../data/assessment';
 import { Button } from '../ui/Button';
 
 interface FormState {
@@ -35,16 +37,43 @@ function validate(values: FormState): Errors {
   if (values.phone.trim() && !/^[+\d][\d\s()-]{6,}$/.test(values.phone.trim()))
   errors.phone = 'Enter a valid phone number, or leave it blank.';
   if (!values.service) errors.service = 'Select the service you need.';
-  if (!values.budget) errors.budget = 'Select an indicative budget range.';
-  if (values.description.trim().length < 20)
-  errors.description = 'A little more detail helps — at least 20 characters.';
+  if (values.description.trim().length < 10)
+  errors.description = 'Add a sentence about what you need.';
   return errors;
 }
+
+/** Field order used to move focus to the first problem after a failed submit. */
+const fieldOrder: (keyof FormState)[] = ['name', 'company', 'email', 'phone', 'service', 'budget', 'description'];
 
 export function ContactForm() {
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [searchParams] = useSearchParams();
+
+  // "Discuss this" links pass ?service=…; package cards pass ?package=…;
+  // the assessment passes ?areas=….
+  const requestedService = searchParams.get('service');
+  const requestedPackage = searchParams.get('package');
+  const assessed = (searchParams.get('areas') ?? '').
+  split(',').
+  map((id) => assessmentAreas.find((area) => area.id === id)?.label).
+  filter((label): label is string => Boolean(label));
+
+  useEffect(() => {
+    if (requestedService && serviceOptions.includes(requestedService)) {
+      setValues((current) => ({ ...current, service: requestedService }));
+    }
+  }, [requestedService]);
+
+  useEffect(() => {
+    if (requestedPackage) {
+      setValues((current) => current.description ? current : {
+        ...current,
+        description: `I'm interested in the ${requestedPackage} package. `
+      });
+    }
+  }, [requestedPackage]);
 
   const update = (key: keyof FormState) => (
   event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -59,6 +88,8 @@ export function ContactForm() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
       setStatus('error');
+      const first = fieldOrder.find((key) => nextErrors[key]);
+      if (first) document.getElementById(first)?.focus();
       return;
     }
 
@@ -74,8 +105,9 @@ export function ContactForm() {
       formData.append('phone', values.phone || 'Not provided');
       formData.append('company', values.company || 'Not provided');
       formData.append('service', values.service);
-      formData.append('budget', values.budget);
+      formData.append('budget', values.budget || 'Not specified');
       formData.append('message', values.description);
+      if (assessed.length > 0) formData.append('assessment_priorities', assessed.join(', '));
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -121,6 +153,16 @@ export function ContactForm() {
           <AlertCircleIcon className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
           <span>Please correct {errorList.length} field{errorList.length > 1 ? 's' : ''} below.</span>
         </div>
+      }
+
+      {assessed.length > 0 &&
+      <p className="flex items-start gap-3 rounded-lg border border-accent/30 bg-accent/[0.06] p-4 text-[13.5px] text-mist-dim">
+          <SparklesIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true" />
+          <span>
+            Your assessment priorities will be included with this enquiry:{' '}
+            <span className="text-white">{assessed.join(', ')}</span>
+          </span>
+        </p>
       }
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -192,7 +234,7 @@ export function ContactForm() {
             )}
           </select>
         </Field>
-        <Field label="Budget range" name="budget" error={errors.budget} required>
+        <Field label="Budget range (optional)" name="budget" error={errors.budget}>
           <select
             id="budget"
             name="budget"

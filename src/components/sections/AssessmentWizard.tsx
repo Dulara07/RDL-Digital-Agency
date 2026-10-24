@@ -42,12 +42,15 @@ export function AssessmentWizard() {
   const progress = complete ? 100 : step / assessmentQuestions.length * 100;
 
   return (
-    <section aria-labelledby="assessment-heading" className="relative border-y border-line bg-ink-950/60">
+    <section
+      id="assessment"
+      aria-labelledby="assessment-heading"
+      className="relative border-y border-line bg-ink-950/60">
       <div className="shell py-20 md:py-28">
         <SectionHeading
-          eyebrow="Free digital assessment"
-          title={<span id="assessment-heading">Get your free digital assessment</span>}
-          subtitle="Six questions, about a minute. You will get the growth areas we would prioritise for a business like yours." />
+          eyebrow="Free 1-minute quiz"
+          title={<span id="assessment-heading">Not sure where to start? Take the quiz</span>}
+          subtitle="Six easy questions about your business. We’ll show you what we would do first for a business like yours — free, with no obligation." />
         
 
         <div className="mt-12 overflow-hidden rounded-xl border border-line bg-ink-800/50">
@@ -140,7 +143,7 @@ export function AssessmentWizard() {
                 className="flex flex-col gap-7">
                 
                   <div className="flex flex-col gap-2">
-                    <p className="text-[11px] uppercase tracking-[0.16em] text-accent-soft">
+                    <p className="text-[12px] uppercase tracking-[0.16em] text-accent-soft">
                       Your digital growth areas
                     </p>
                     <h3 className="text-[24px] font-medium tracking-tight text-white md:text-[30px]">
@@ -164,7 +167,7 @@ export function AssessmentWizard() {
                         <div className="flex items-center justify-between">
                           <entry.area.icon className="h-4 w-4 text-accent-soft" aria-hidden="true" />
                           {index === 0 &&
-                      <span className="rounded-full border border-accent/50 bg-accent/15 px-2 py-0.5 text-[10.5px] uppercase tracking-[0.1em] text-accent-soft">
+                      <span className="rounded-full border border-accent/50 bg-accent/15 px-2 py-0.5 text-[11.5px] uppercase tracking-[0.1em] text-accent-soft">
                               Priority
                             </span>
                       }
@@ -178,11 +181,14 @@ export function AssessmentWizard() {
                   </ul>
 
                   <div className="flex flex-col gap-4 border-t border-line pt-7 sm:flex-row sm:items-center">
-                    <Button to="/contact" withArrow>
-                      Talk to Our Team
+                    <Button
+                    to={`/contact?areas=${results.map((entry) => entry.area.id).join(',')}#form`}
+                    withArrow>
+
+                      Send These Results to Our Team
                     </Button>
-                    <p className="text-[12.5px] text-mist-faint">
-                      Indicative result generated from your answers — a call will refine it.
+                    <p className="text-[13px] text-mist-faint">
+                      Your priorities are attached to the enquiry form, so you will not need to repeat them.
                     </p>
                   </div>
                 </motion.div>

@@ -71,7 +71,7 @@ export function Solutions() {
         }
         intro="Services describe what we do. Solutions describe what changes in your business. Pick the outcome that sounds like your situation."
         actions={
-        <Button to="/contact" size="lg" withArrow>
+        <Button to="/solutions#assessment" size="lg" withArrow>
             Get a Digital Assessment
           </Button>
         } />
@@ -95,7 +95,7 @@ export function Solutions() {
               
                 <div className="grid gap-6 lg:grid-cols-[0.5fr_1fr_0.7fr] lg:items-start lg:gap-10">
                   <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-[11.5px] text-accent">
+                    <span className="font-mono text-[12px] text-accent">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <h3 className="text-[22px] font-medium tracking-tight text-white">
@@ -115,7 +115,7 @@ export function Solutions() {
                       {solution.includes.map((item) =>
                     <li
                       key={item}
-                      className="rounded-md border border-line bg-white/[0.02] px-2 py-1 text-[11.5px] text-mist-faint">
+                      className="rounded-md border border-line bg-white/[0.02] px-2 py-1 text-[12px] text-mist-faint">
                       
                           {item}
                         </li>
@@ -146,7 +146,7 @@ export function Solutions() {
       <CTASection
         eyebrow="Get started"
         title="Describe your situation — we will map it to a solution."
-        primaryLabel="Discuss Your Business" />
+        primaryLabel="Start a Project" />
       
     </>);
 

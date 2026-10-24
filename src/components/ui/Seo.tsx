@@ -47,7 +47,10 @@ export function Seo({
 }: SeoProps) {
   const { pathname } = useLocation();
   const canonical = `${site.url}${pathname}`;
-  const ogImage = image ?? `${site.url}/og-default.jpg`;
+  // Social crawlers need absolute image URLs.
+  const ogImage = image ?
+  /^https?:\/\//.test(image) ? image : `${site.url}${image}` :
+  `${site.url}/og-default.jpg`;
 
   useEffect(() => {
     document.title = title;
@@ -94,9 +97,10 @@ export function Seo({
       { sameAs: site.social.map((item) => item.href) } :
       {})
     };
-    const payloads = structuredData ?
+    const pageSchemas = structuredData ?
     Array.isArray(structuredData) ? structuredData : [structuredData] :
-    [defaultOrgSchema];
+    [];
+    const payloads = [defaultOrgSchema, ...pageSchemas];
 
     payloads.forEach((payload, index) => {
       const script = document.createElement('script');

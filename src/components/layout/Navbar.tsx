@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Logo } from '../ui/Logo';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronDownIcon, MenuIcon, XIcon } from 'lucide-react';
@@ -55,7 +56,7 @@ export function Navbar() {
             className="flex items-center"
             aria-label={`${site.name} — home`}>
 
-            <img src="/brand/logo-wordmark.png" alt={site.name} className="h-9 w-auto" />
+            <Logo />
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
@@ -65,7 +66,15 @@ export function Navbar() {
               key={item.label}
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}>
+              onMouseLeave={() => setServicesOpen(false)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                  setServicesOpen(false);
+                }
+              }}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') setServicesOpen(false);
+              }}>
               
                   <NavLink
                 to={item.href}
@@ -109,8 +118,8 @@ export function Navbar() {
                                 <span className="text-[13.5px] font-medium text-white">
                                   {service.name}
                                 </span>
-                                <span className="text-[12px] leading-snug text-mist-faint">
-                                  {service.summary.slice(0, 62)}…
+                                <span className="line-clamp-2 text-[12.5px] leading-snug text-mist-faint">
+                                  {service.plainName}
                                 </span>
                               </span>
                             </Link>
@@ -145,7 +154,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Button to="/contact" size="sm" withArrow>
-              Let&apos;s Talk
+              Start a Project
             </Button>
           </div>
 
@@ -192,7 +201,7 @@ export function Navbar() {
                 </NavLink>
             )}
               <div className="my-2 hairline" />
-              <p className="px-3 pb-1 text-[11px] uppercase tracking-[0.16em] text-mist-faint">
+              <p className="px-3 pb-1 text-[12px] uppercase tracking-[0.16em] text-mist-faint">
                 Service pages
               </p>
               {detailServices.map((service) =>
@@ -206,7 +215,7 @@ export function Navbar() {
             )}
               <div className="mt-4">
                 <Button to="/contact" size="lg" fullWidth>
-                  Let&apos;s Talk
+                  Start a Project
                 </Button>
               </div>
             </nav>

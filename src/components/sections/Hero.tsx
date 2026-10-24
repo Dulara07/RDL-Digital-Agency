@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 import { AnimatedBackground } from '../ui/AnimatedBackground';
 import { HeroVisual } from './HeroVisual';
 
-const trustPoints = ['Sri Lanka', 'Digital Marketing', 'Software Development'];
+const trustPoints = ['Based in Sri Lanka', 'No jargon', 'One team for everything'];
 
 export function Hero() {
   const prefersReduced = useReducedMotion();
@@ -25,7 +25,7 @@ export function Hero() {
           <div className="flex flex-col gap-7">
             <motion.p
               {...fade(0)}
-              className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-medium uppercase tracking-[0.2em] text-mist-faint">
+              className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[12.5px] font-medium uppercase tracking-[0.16em] text-mist-dim">
 
               {trustPoints.map((point, index) =>
               <React.Fragment key={point}>
@@ -39,24 +39,25 @@ export function Hero() {
               {...fade(0.06)}
               className="text-balance text-[clamp(2.4rem,5.6vw,4.3rem)] font-semibold leading-[1.02] tracking-tightest text-white">
               
-              Digital marketing and software that{' '}
-              <span className="font-display font-normal italic text-accent-soft">
-                grow Sri Lankan businesses
+              More customers, less paperwork —{' '}
+              <span className="text-shimmer font-display font-normal italic">
+                for Sri Lankan businesses
               </span>
               .
             </motion.h1>
 
             <motion.p {...fade(0.12)} className="max-w-xl text-[16px] leading-relaxed text-mist-dim md:text-[18px]">
-              Digital marketing, web development, software and IT solutions designed to help SMEs
-              across Sri Lanka grow faster, work smarter, and compete globally.
+              We build your website, help customers find you on Google and Facebook, and set up
+              simple tools that save your team time. No jargon — we explain everything in plain
+              words and handle the technical side for you.
             </motion.p>
 
             <motion.div {...fade(0.18)} className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button to="/contact" size="lg" withArrow>
                 Start a Project
               </Button>
-              <Button to="/services" size="lg" variant="secondary">
-                Explore Our Services
+              <Button to="/#help" size="lg" variant="secondary">
+                What Can You Help With?
               </Button>
             </motion.div>
 
@@ -65,13 +66,16 @@ export function Hero() {
               className="mt-2 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-6">
               
               {[
-              { value: 'Marketing', label: 'Demand & brand' },
-              { value: 'Software', label: 'Systems & apps' },
-              { value: 'IT', label: 'Cloud & support' }].
+              { value: 'Get found', label: 'On Google & social media', dot: 'bg-coral' },
+              { value: 'Win customers', label: 'With a website that sells', dot: 'bg-aqua' },
+              { value: 'Save time', label: 'With simple business tools', dot: 'bg-mint' }].
               map((item) =>
               <div key={item.value}>
-                  <dt className="text-[14px] font-medium text-white">{item.value}</dt>
-                  <dd className="text-[12px] text-mist-faint">{item.label}</dd>
+                  <dt className="flex items-center gap-2 text-[15px] font-medium text-white">
+                    <span aria-hidden="true" className={`h-2 w-2 rounded-full ${item.dot}`} />
+                    {item.value}
+                  </dt>
+                  <dd className="text-[13px] leading-snug text-mist-dim">{item.label}</dd>
                 </div>
               )}
             </motion.dl>

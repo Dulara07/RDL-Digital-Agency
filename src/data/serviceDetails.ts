@@ -60,7 +60,7 @@ export const serviceDetails: ServiceDetailContent[] = [
     body: 'We start with the commercial maths — margin, average order value, close rate — and work backwards to a channel plan that can actually hit the target. Then we instrument everything before spending.',
     pillars: [
     { title: 'Proposition first', body: 'Test the offer and message before scaling the spend behind it.' },
-    { title: 'Tracking from day one', body: 'Every visitor and enquiry tracked properly before we spend a dollar on ads.' },
+    { title: 'Tracking from day one', body: 'Every visitor and enquiry tracked properly before a single rupee goes into ads.' },
     { title: 'Managed to cost per lead', body: 'Weekly optimisation against pipeline quality, not clicks.' }]
 
   },
@@ -84,7 +84,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Lower cost per lead', body: 'Waste removed from channels that never converted.', icon: GaugeIcon },
   { title: 'Decisions with evidence', body: 'One dashboard your team and ours both work from.', icon: BarChart3Icon }],
 
-  caseStudySlugs: ['halden-b2b-demand-programme', 'orbit-retail-ecommerce-growth'],
+  caseStudySlugs: ['smsverified-website-promotion-campaign', 'us-media-video-editing-agency-website'],
   faqs: [
   { question: 'Is there a minimum commitment?', answer: 'We recommend a 90-day sprint so there is time to establish tracking and gather statistically useful data. After that, retainers run month to month.' },
   { question: 'Do you charge on top of ad spend?', answer: 'Management is a fixed monthly fee based on scope. Ad spend is paid directly by you to the platforms, so you retain full visibility.' },
@@ -140,7 +140,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Better qualified visitors', body: 'Pages matched to intent attract buyers, not browsers.', icon: TargetIcon },
   { title: 'Faster site overall', body: 'Performance work benefits every visitor and every channel.', icon: ZapIcon }],
 
-  caseStudySlugs: ['halden-b2b-demand-programme', 'meridian-labs-platform'],
+  caseStudySlugs: ['eict-online-ict-tutoring-platform', 'smsverified-website-promotion-campaign'],
   faqs: [
   { question: 'How quickly will we see results?', answer: 'Technical fixes can move visibility within weeks. Competitive rankings typically take three to six months, which is why we sequence quick technical wins first.' },
   { question: 'Do you guarantee first position?', answer: 'No credible agency can. We commit to a defined scope of work and report on visibility, traffic and enquiries so progress is measurable.' },
@@ -196,7 +196,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Credibility on first impression', body: 'A site that matches the quality of your work.', icon: ShieldCheckIcon },
   { title: 'Lower running cost', body: 'Maintainable code and hosting sized to actual traffic.', icon: GaugeIcon }],
 
-  caseStudySlugs: ['meridian-labs-platform', 'casa-verde-brand-transformation'],
+  caseStudySlugs: ['us-media-video-editing-agency-website', 'eict-online-ict-tutoring-platform'],
   faqs: [
   { question: 'Can we edit the site ourselves?', answer: 'Yes. Content is managed through a CMS with guardrails, and we train your team during handover.' },
   { question: 'Do you handle hosting?', answer: 'We can host and manage the site, or deploy into your own cloud account and hand over the infrastructure documentation.' },
@@ -252,7 +252,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Accurate stock, everywhere', body: 'One inventory truth across all sales channels.', icon: BoxIcon },
   { title: 'Customers who return', body: 'Lifecycle mechanics that reduce acquisition dependence.', icon: RefreshCwIcon }],
 
-  caseStudySlugs: ['orbit-retail-ecommerce-growth', 'vertex-foods-business-automation'],
+  caseStudySlugs: ['rainboweyes-flower-boutique-website', 'us-media-video-editing-agency-website'],
   faqs: [
   { question: 'Shopify or custom?', answer: 'Whichever fits the catalogue and integrations. We recommend platform solutions where they fit and custom builds when inventory or pricing logic is unusual.' },
   { question: 'Can you connect our in-store checkout system?', answer: 'In most cases, yes — we can sync stock, pricing and orders both ways with your existing till or checkout system.' },
@@ -308,7 +308,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Fewer costly errors', body: 'Validation and single-entry data reduce rework.', icon: ShieldCheckIcon },
   { title: 'Visibility when it matters', body: 'Live operational reporting instead of month-end guesswork.', icon: BarChart3Icon }],
 
-  caseStudySlugs: ['vertex-foods-business-automation', 'northport-trade-erp'],
+  caseStudySlugs: ['sakura-products-assessment-platform', 'rainboweyes-flower-boutique-website'],
   faqs: [
   { question: 'Do we own the code?', answer: 'Yes. You own the source code, data and infrastructure. We hand over repositories and documentation at every milestone.' },
   { question: 'How do you price custom software?', answer: 'A fixed-price discovery phase, then fixed-price increments per release so budget stays predictable.' },
@@ -364,7 +364,7 @@ export const serviceDetails: ServiceDetailContent[] = [
   { title: 'Reduced business risk', body: 'Access, backups and recovery documented and tested.', icon: ShieldCheckIcon },
   { title: 'Predictable IT spend', body: 'One plan instead of surprise emergency invoices.', icon: GaugeIcon }],
 
-  caseStudySlugs: ['northport-trade-erp', 'meridian-labs-platform'],
+  caseStudySlugs: ['sakura-products-assessment-platform'],
   faqs: [
   { question: 'Do you provide on-site support?', answer: 'Most support is remote with scheduled on-site visits where hardware or networking requires it.' },
   { question: 'What response times do you offer?', answer: 'Support plans define severity levels with response commitments, typically one hour for critical incidents during business hours.' },

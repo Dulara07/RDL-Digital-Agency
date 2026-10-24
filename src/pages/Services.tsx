@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button';
 import { ServicesSection } from '../components/sections/ServicesSection';
 import { ServiceExplorer } from '../components/sections/ServiceExplorer';
 import { ProcessTimeline } from '../components/sections/ProcessTimeline';
-import { TechnologySection } from '../components/sections/TechnologySection';
+import { Glossary } from '../components/sections/Glossary';
 import { Packages } from '../components/sections/Packages';
 import { FaqSection } from '../components/sections/FaqSection';
 import { CTASection } from '../components/sections/CTASection';
@@ -22,15 +22,15 @@ export function Services() {
         kicker="Services"
         title={
         <>
-            Two practices, one accountable team:{' '}
-            <span className="font-display font-normal italic text-accent-soft">growth and technology</span>.
+            Everything your business needs online,{' '}
+            <span className="font-display font-normal italic text-accent-soft">explained simply</span>.
           </>
         }
-        intro="Most agencies do marketing or software. We run both, which means your campaigns, website, systems and reporting are designed as one thing instead of four."
+        intro="We help you get more customers and run your business more easily. Each service below says what it does for you first — the technical name comes second."
         actions={
         <>
             <Button to="/contact" size="lg" withArrow>
-              Start Your Project
+              Start a Project
             </Button>
             <Button to="/work" size="lg" variant="secondary">
               See the Work
@@ -39,9 +39,9 @@ export function Services() {
         } />
       
       <ServicesSection />
+      <Glossary />
       <ServiceExplorer />
       <ProcessTimeline />
-      <TechnologySection />
       <Packages />
       <FaqSection />
       <CTASection
@@ -49,7 +49,7 @@ export function Services() {
         title="Not sure which service you need?"
         body="Describe the problem rather than the solution. We will tell you which capability applies, and whether you need it yet."
         primaryLabel="Get a Digital Assessment"
-        primaryTo="/contact" />
+        primaryTo="/contact#assessment" />
       
     </>);
 

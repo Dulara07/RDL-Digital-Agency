@@ -7,6 +7,11 @@ import { CTASection } from '../components/sections/CTASection';
 import { insightCategories, posts } from '../data/insights';
 import { site } from '../data/site';
 
+// Only offer filters that have at least one article, so no filter is a dead end.
+const availableCategories = insightCategories.filter(
+  (category) => category === 'All' || posts.some((post) => post.category === category)
+);
+
 export function Insights() {
   const [category, setCategory] = useState('All');
   const prefersReduced = useReducedMotion();
@@ -39,7 +44,7 @@ export function Insights() {
             Articles
           </h2>
           <div role="group" aria-label="Filter by category" className="flex flex-wrap gap-2">
-            {insightCategories.map((item) => {
+            {availableCategories.map((item) => {
               const isActive = category === item;
               return (
                 <button
@@ -89,7 +94,7 @@ export function Insights() {
       <CTASection
         eyebrow="Apply it"
         title="Want this applied to your business instead of read about?"
-        primaryLabel="Talk to an Expert" />
+        primaryLabel="Start a Project" />
       
     </>);
 

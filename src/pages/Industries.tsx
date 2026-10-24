@@ -4,7 +4,6 @@ import { PageHero } from '../components/layout/PageHero';
 import { Button } from '../components/ui/Button';
 import { IndustriesSection } from '../components/sections/IndustriesSection';
 import { WorkSection } from '../components/sections/WorkSection';
-import { FaqSection } from '../components/sections/FaqSection';
 import { CTASection } from '../components/sections/CTASection';
 import { site } from '../data/site';
 
@@ -26,7 +25,7 @@ export function Industries() {
         intro="We have built for these sectors before, which means fewer assumptions to test and a faster route to something that works."
         actions={
         <Button to="/contact" size="lg" withArrow>
-            Talk About Your Sector
+            Start a Project
           </Button>
         } />
       
@@ -35,15 +34,14 @@ export function Industries() {
         limit={4}
         eyebrow="Sector proof"
         heading="Recent work by industry"
-        subtitle="Examples from retail, food, manufacturing and trading engagements."
+        subtitle="Examples from recent engagements across the sectors we serve."
         featureFirst={false} />
-      
-      <FaqSection />
+
       <CTASection
         eyebrow="Your industry"
         title="Not listed? We have probably solved the underlying problem."
         body="The systems behind most SME operations rhyme across sectors. Tell us the process that hurts most."
-        primaryLabel="Start a Conversation" />
+        primaryLabel="Start a Project" />
       
     </>);
 

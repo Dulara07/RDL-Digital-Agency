@@ -18,9 +18,9 @@ export function ProcessTimeline() {
     <section aria-labelledby="process-heading" className="relative">
       <div className="shell py-20 md:py-28">
         <SectionHeading
-          eyebrow="Process"
-          title={<span id="process-heading">From idea to impact</span>}
-          subtitle="Six stages, each with defined deliverables so you always know what you are receiving and when." />
+          eyebrow="How it works"
+          title={<span id="process-heading">Working with us, step by step</span>}
+          subtitle="Six simple steps. At each one you know what is happening, what you will receive and what it costs." />
         
 
         <ol ref={containerRef} className="relative mt-14 flex flex-col">
@@ -64,7 +64,7 @@ export function ProcessTimeline() {
                   {step.deliverables.map((deliverable) =>
                 <li
                   key={deliverable}
-                  className="rounded-md border border-line bg-white/[0.02] px-2.5 py-1.5 text-[11.5px] text-mist-faint">
+                  className="rounded-md border border-line bg-white/[0.02] px-2.5 py-1.5 text-[12px] text-mist-faint">
                   
                       {deliverable}
                     </li>

@@ -16,7 +16,7 @@ interface FaqSectionProps {
 export function FaqSection({
   items = generalFaqs,
   eyebrow = 'FAQ',
-  title = 'Questions we are asked before every project',
+  title = 'Questions business owners ask us',
   idPrefix = 'general-faq'
 }: FaqSectionProps) {
   return (
@@ -29,7 +29,7 @@ export function FaqSection({
               Something not covered here? A 20-minute call is usually faster than email.
             </p>
             <Button to="/contact" size="sm" variant="secondary" withArrow>
-              Talk to an Expert
+              Start a Project
             </Button>
           </Reveal>
         </div>

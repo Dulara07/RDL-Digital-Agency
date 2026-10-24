@@ -1,5 +1,6 @@
 import React from 'react';
-import { clientLogos, stats } from '../../data/site';
+import { Link } from 'react-router-dom';
+import { clients, stats } from '../../data/site';
 import { StatCounter } from '../ui/StatCounter';
 import { Reveal } from '../ui/Reveal';
 
@@ -10,20 +11,36 @@ export function TrustStrip() {
         <Reveal className="flex flex-col gap-8">
           <h2
             id="trust-heading"
-            className="text-[11px] font-medium uppercase tracking-[0.2em] text-mist-faint">
+            className="text-[12px] font-medium uppercase tracking-[0.2em] text-mist-faint">
             
-            Trusted by ambitious businesses
+            Recent clients
           </h2>
-          <ul className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3 lg:grid-cols-6">
-            {clientLogos.map((logo) =>
-            <li key={logo.name} className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-md border border-line font-mono text-[12px] text-mist-faint">
-                  {logo.mark}
-                </span>
-                <span className="text-[13.5px] text-mist-dim">{logo.name}</span>
-              </li>
-            )}
-          </ul>
+          {/* Endless scrolling strip: the list is repeated so the loop has no gap;
+              copies after the first are hidden from screen readers. */}
+          <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+            <div className="marquee-track flex w-max animate-marquee">
+              {[0, 1, 2, 3].map((copy) =>
+              <ul
+                key={copy}
+                aria-hidden={copy > 0 ? true : undefined}
+                className="flex shrink-0 items-center">
+
+                  {clients.map((client) =>
+                <li key={client.name} className="flex items-center">
+                      <Link
+                    to={client.href}
+                    tabIndex={copy > 0 ? -1 : undefined}
+                    className="whitespace-nowrap px-8 text-[18px] font-medium tracking-tight text-mist-dim transition-colors duration-200 ease-premium hover:text-white">
+
+                        {client.name}
+                      </Link>
+                      <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-accent/60" />
+                    </li>
+                )}
+                </ul>
+              )}
+            </div>
+          </div>
         </Reveal>
 
         <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-line pt-10 md:grid-cols-4">

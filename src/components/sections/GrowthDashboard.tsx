@@ -36,7 +36,7 @@ export function GrowthDashboard() {
               </span>
               <h3 className="text-[15px] font-medium text-white">Growth overview · last 12 months</h3>
             </div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-[11.5px] text-mist-faint">
+            <p className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-[12px] text-mist-faint">
               <InfoIcon className="h-3.5 w-3.5" aria-hidden="true" />
               Demonstration data — example figures, not a client account
             </p>
@@ -46,10 +46,10 @@ export function GrowthDashboard() {
             <div className="bg-ink-900 p-6 md:p-8">
               <div className="flex items-baseline justify-between">
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-mist-faint">
+                  <p className="text-[12px] uppercase tracking-[0.14em] text-mist-faint">
                     Revenue from marketing
                   </p>
-                  <p className="mt-1.5 font-display text-[36px] leading-none text-white">$286k</p>
+                  <p className="mt-1.5 font-display text-[36px] leading-none text-white">Rs. 8.6M</p>
                 </div>
                 <span className="rounded-full border border-aqua/30 bg-aqua/10 px-2.5 py-1 text-[12px] text-aqua">
                   +41% vs last year
@@ -98,10 +98,10 @@ export function GrowthDashboard() {
                   transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }} />
                 
                 {points.map((point) =>
-                <circle key={point.month} cx={point.x} cy={point.y} r="2.5" fill="#0A0B10" stroke="#9483FF" />
+                <circle key={point.month} cx={point.x} cy={point.y} r="2.5" fill="#0E0D23" stroke="#A391FF" />
                 )}
               </svg>
-              <ul className="mt-3 flex justify-between font-mono text-[10.5px] text-mist-faint">
+              <ul className="mt-3 flex justify-between font-mono text-[11.5px] text-mist-faint">
                 {revenueSeries.filter((_, index) => index % 2 === 0).map((point) =>
                 <li key={point.month}>{point.month}</li>
                 )}
@@ -112,7 +112,7 @@ export function GrowthDashboard() {
               <div className="grid grid-cols-2 gap-px bg-line">
                 {dashboardMetrics.slice(0, 4).map((metric) =>
                 <div key={metric.id} className="bg-ink-900 p-5">
-                    <p className="text-[11px] uppercase tracking-[0.12em] text-mist-faint">
+                    <p className="text-[12px] uppercase tracking-[0.12em] text-mist-faint">
                       {metric.label}
                     </p>
                     <p className="mt-2 text-[22px] font-medium leading-none text-white">
@@ -124,7 +124,7 @@ export function GrowthDashboard() {
               </div>
 
               <div className="flex-1 bg-ink-900 p-5">
-                <p className="text-[11px] uppercase tracking-[0.12em] text-mist-faint">
+                <p className="text-[12px] uppercase tracking-[0.12em] text-mist-faint">
                   Channel contribution
                 </p>
                 <ul className="mt-4 flex flex-col gap-3.5">

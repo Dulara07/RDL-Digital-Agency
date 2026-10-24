@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { NotFound } from './NotFound';
+import { ResultValue } from '../components/ui/ResultValue';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { Reveal } from '../components/ui/Reveal';
@@ -13,7 +15,7 @@ export function WorkDetail() {
   const { slug = '' } = useParams();
   const study = getCaseStudy(slug);
 
-  if (!study) return <Navigate to="/work" replace />;
+  if (!study) return <NotFound />;
 
   const others = caseStudies.filter((item) => item.slug !== study.slug).slice(0, 3);
 
@@ -56,7 +58,7 @@ export function WorkDetail() {
               <ArrowLeftIcon className="h-3.5 w-3.5" aria-hidden="true" />
               All work
             </Link>
-            <p className="mt-8 text-[11.5px] uppercase tracking-[0.16em] text-accent-soft">
+            <p className="mt-8 text-[12px] uppercase tracking-[0.16em] text-accent-soft">
               {study.industry} · {study.projectType} · {study.year}
             </p>
             <h1 className="mt-4 max-w-3xl text-balance text-[clamp(2.1rem,5vw,3.6rem)] font-semibold leading-[1.05] tracking-tightest text-white">
@@ -66,10 +68,12 @@ export function WorkDetail() {
               {study.summary}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
+              {study.liveUrl &&
               <Button href={study.liveUrl} withArrow>
-                View Live Project
-              </Button>
-              <Button to="/contact" variant="secondary">
+                  View Live Project
+                </Button>
+              }
+              <Button to="/contact" variant={study.liveUrl ? 'secondary' : 'primary'}>
                 Start a Similar Project
               </Button>
             </div>
@@ -90,11 +94,15 @@ export function WorkDetail() {
             <dl className="mt-12 grid gap-8 border-y border-line py-10 sm:grid-cols-3">
               {study.results.map((result) =>
               <div key={result.label} className="flex flex-col-reverse gap-2">
-                  <dt className="text-[11.5px] uppercase tracking-[0.12em] text-mist-faint">
+                  <dt className="text-[12px] uppercase tracking-[0.12em] text-mist-faint">
                     {result.label}
                   </dt>
-                  <dd className="font-display text-[clamp(2rem,3.5vw,2.8rem)] leading-none text-white">
-                    {result.value}
+                  <dd>
+                    <ResultValue
+                    value={result.value}
+                    figureClassName="text-[clamp(2rem,3.5vw,2.8rem)]"
+                    textClassName="text-[clamp(1.25rem,2vw,1.6rem)]" />
+
                   </dd>
                 </div>
               )}
@@ -109,7 +117,7 @@ export function WorkDetail() {
               { title: 'What we delivered', body: study.solution }].
               map((block) =>
               <Reveal key={block.title} className="flex flex-col gap-3">
-                  <h2 className="text-[11.5px] uppercase tracking-[0.16em] text-accent-soft">
+                  <h2 className="text-[12px] uppercase tracking-[0.16em] text-accent-soft">
                     {block.title}
                   </h2>
                   <p className="max-w-2xl text-[15px] leading-relaxed text-mist-dim">{block.body}</p>
@@ -117,7 +125,7 @@ export function WorkDetail() {
               )}
 
               <Reveal className="flex flex-col gap-4">
-                <h2 className="text-[11.5px] uppercase tracking-[0.16em] text-accent-soft">
+                <h2 className="text-[12px] uppercase tracking-[0.16em] text-accent-soft">
                   Project gallery
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -138,7 +146,7 @@ export function WorkDetail() {
 
             <Reveal className="flex h-fit flex-col gap-8 rounded-xl border border-line bg-ink-800/40 p-6 lg:sticky lg:top-28">
               <div className="flex flex-col gap-3">
-                <h2 className="text-[11px] uppercase tracking-[0.16em] text-mist-faint">
+                <h2 className="text-[12px] uppercase tracking-[0.16em] text-mist-faint">
                   Services delivered
                 </h2>
                 <ul className="flex flex-col gap-2">
@@ -151,7 +159,7 @@ export function WorkDetail() {
                 </ul>
               </div>
               <div className="flex flex-col gap-3 border-t border-line pt-6">
-                <h2 className="text-[11px] uppercase tracking-[0.16em] text-mist-faint">
+                <h2 className="text-[12px] uppercase tracking-[0.16em] text-mist-faint">
                   Technologies used
                 </h2>
                 <ul className="flex flex-wrap gap-1.5">
@@ -166,7 +174,7 @@ export function WorkDetail() {
           </div>
 
           <section aria-labelledby="more-work" className="mt-20 border-t border-line pt-12">
-            <h2 id="more-work" className="text-[11px] uppercase tracking-[0.18em] text-mist-faint">
+            <h2 id="more-work" className="text-[12px] uppercase tracking-[0.18em] text-mist-faint">
               More work
             </h2>
             <ul className="mt-6 grid gap-4 md:grid-cols-3">
@@ -176,7 +184,7 @@ export function WorkDetail() {
                   to={`/work/${item.slug}`}
                   className="group flex flex-col gap-3 rounded-lg border border-line p-5 transition-[border-color,transform] duration-300 ease-premium hover:-translate-y-0.5 hover:border-line-strong">
                   
-                    <span className="text-[11.5px] uppercase tracking-[0.12em] text-mist-faint">
+                    <span className="text-[12px] uppercase tracking-[0.12em] text-mist-faint">
                       {item.projectType}
                     </span>
                     <span className="text-[16px] font-medium text-white">{item.client}</span>
@@ -194,7 +202,7 @@ export function WorkDetail() {
       <CTASection
         eyebrow="Similar challenge?"
         title="Let’s see whether the same approach fits your business."
-        primaryLabel="Discuss Your Business" />
+        primaryLabel="Start a Project" />
       
     </>);
 

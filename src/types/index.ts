@@ -5,6 +5,8 @@ export type ServiceGroupId = 'digital-growth' | 'technology';
 export interface Service {
   slug: string;
   name: string;
+  /** Everyday wording for owners who don't know the technical name. */
+  plainName: string;
   group: ServiceGroupId;
   summary: string;
   icon: LucideIcon;
@@ -73,7 +75,8 @@ export interface CaseStudy {
   technologies: string[];
   results: {label: string;value: string;}[];
   gallery: {src: string;caption: string;}[];
-  liveUrl: string;
+  /** Omit when there is no public URL — the "View Live Project" button is hidden. */
+  liveUrl?: string;
 }
 
 export interface Testimonial {

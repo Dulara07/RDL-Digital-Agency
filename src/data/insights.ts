@@ -21,7 +21,7 @@ export const posts: Post[] = [
   excerpt:
   'Most small businesses are told to publish more. In practice, the first wins usually come from fixing three technical issues and one page.',
   image: "/seo-for-smes-sri-lanka.jpg",
-  author: 'Amara Silva',
+  author: 'RDL Digital Agency',
   body: [
   {
     paragraphs: [
@@ -66,7 +66,7 @@ export const posts: Post[] = [
   excerpt:
   'Before you buy an AI tool, find the three tasks your team repeats daily. Automating those usually funds the rest of your technology roadmap.',
   image: "/business-automation-before-ai.jpg",
-  author: 'Dinesh Perera',
+  author: 'RDL Digital Agency',
   body: [
   {
     paragraphs: [
@@ -103,7 +103,7 @@ export const posts: Post[] = [
   excerpt:
   'AI is oversold and underused at the same time. These are the four applications we see paying back inside a quarter for SMEs.',
   image: "/practical-ai-for-small-teams.jpg",
-  author: 'Amara Silva',
+  author: 'RDL Digital Agency',
   body: [
   {
     paragraphs: [

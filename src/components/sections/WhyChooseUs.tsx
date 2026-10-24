@@ -28,7 +28,7 @@ export function WhyChooseUs() {
                   className="h-4 w-4 text-mist-dim transition-colors duration-300 ease-premium group-hover:text-accent-soft" />
                 
                 </span>
-                <span className="font-mono text-[11.5px] text-mist-faint/60">
+                <span className="font-mono text-[12px] text-mist-faint/60">
                   {String(index + 1).padStart(2, '0')}
                 </span>
               </div>

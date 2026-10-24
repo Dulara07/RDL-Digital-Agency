@@ -17,11 +17,11 @@ import { PrivacyPolicy, Terms } from './pages/Legal';
 import { NotFound } from './pages/NotFound';
 
 interface AppProps {
-  /** Desktop-only cursor companion. Disable for a fully conventional pointer. */
+  /** Desktop-only cursor companion. Off by default for a conventional pointer. */
   enableCustomCursor?: boolean;
 }
 
-export function App({ enableCustomCursor = true }: AppProps) {
+export function App({ enableCustomCursor = false }: AppProps) {
   return (
     <BrowserRouter>
       <Routes>

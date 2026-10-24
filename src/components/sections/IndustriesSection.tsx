@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
 import { IndustryCard } from '../cards/IndustryCard';
@@ -10,34 +10,30 @@ interface IndustriesSectionProps {
 }
 
 export function IndustriesSection({ limit, showAction = true }: IndustriesSectionProps) {
-  const [activeId, setActiveId] = useState<string | null>(null);
   const items = limit ? industries.slice(0, limit) : industries;
 
   return (
     <section aria-labelledby="industries-heading" className="relative">
-      <div className="shell py-20 md:py-28">
-        <SectionHeading
-          eyebrow="Industries"
-          title={<span id="industries-heading">Sector knowledge that shortens discovery</span>}
-          subtitle="Hover or focus an industry to see the solutions we most often deploy there."
-          action={
-          showAction ?
-          <Button to="/industries" variant="secondary" size="sm" withArrow>
+      {/* Split layout: the heading stays pinned while the sector rows scroll past. */}
+      <div className="shell grid gap-12 py-20 md:py-28 lg:grid-cols-[minmax(0,360px)_1fr] lg:gap-20">
+        <div className="flex flex-col gap-8 lg:sticky lg:top-28 lg:self-start">
+          <SectionHeading
+            eyebrow="Industries"
+            title={<span id="industries-heading">Sector knowledge that shortens discovery</span>}
+            subtitle="The solutions we most often deploy in each sector." />
+
+          {showAction &&
+          <div>
+              <Button to="/industries" variant="secondary" size="sm" withArrow>
                 All industries
-              </Button> :
-          undefined
-          } />
-        
+              </Button>
+            </div>
+          }
+        </div>
 
-        <div className="mt-12 grid border-l border-t border-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="border-t border-line">
           {items.map((industry) =>
-          <IndustryCard
-            key={industry.id}
-            industry={industry}
-            active={activeId === industry.id}
-            onActivate={() => setActiveId(industry.id)}
-            onDeactivate={() => setActiveId((current) => current === industry.id ? null : current)} />
-
+          <IndustryCard key={industry.id} industry={industry} />
           )}
         </div>
       </div>

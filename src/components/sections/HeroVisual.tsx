@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
-  ActivityIcon,
   BrainCircuitIcon,
   CloudIcon,
   GlobeIcon,
@@ -22,10 +21,34 @@ join(' ');
 const nodes = [
 { id: 'site', label: 'Website', icon: GlobeIcon, x: 8, y: 6 },
 { id: 'crm', label: 'Customers', icon: UsersIcon, x: 72, y: 2 },
-{ id: 'auto', label: 'Automation', icon: WorkflowIcon, x: 78, y: 54 },
-{ id: 'cloud', label: 'Cloud', icon: CloudIcon, x: 2, y: 62 },
+{ id: 'auto', label: 'Less paperwork', icon: WorkflowIcon, x: 78, y: 54 },
+{ id: 'cloud', label: 'Online 24/7', icon: CloudIcon, x: 2, y: 76 },
 { id: 'ai', label: 'AI', icon: BrainCircuitIcon, x: 42, y: 88 }];
 
+
+/** Events the panel cycles through, so the hero reads as a business at work. */
+const events = [
+{ title: 'New enquiry received', detail: 'from website form' },
+{ title: 'Order #1042 paid', detail: 'card payment · online shop' },
+{ title: 'Invoice sent', detail: 'automatically · no typing' },
+{ title: 'New 5★ review', detail: 'on Google Maps' }];
+
+
+/** Ticks the example figures upward while the hero is on screen. */
+function useLiveFigures(enabled: boolean) {
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    if (!enabled) return;
+    const timer = window.setInterval(() => setTick((value) => value + 1), 3200);
+    return () => window.clearInterval(timer);
+  }, [enabled]);
+  return {
+    event: events[tick % events.length],
+    eventKey: tick,
+    visitors: 18420 + tick * 7,
+    enquiries: 312 + Math.floor((tick + 3) / events.length)
+  };
+}
 
 /**
  * Digital business ecosystem: a live performance panel surrounded by the
@@ -33,11 +56,12 @@ const nodes = [
  */
 export function HeroVisual() {
   const prefersReduced = useReducedMotion();
+  const live = useLiveFigures(!prefersReduced);
 
   return (
-    <div className="relative mx-auto aspect-[5/4.4] w-full max-w-[540px]" aria-hidden="true">
-      {/* Connection field */}
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <div className="relative mx-auto w-full max-w-[540px] sm:aspect-[5/4.4]" aria-hidden="true">
+      {/* Connection field (floating layout only — too cramped on phones) */}
+      <svg className="absolute inset-0 hidden h-full w-full sm:block" viewBox="0 0 100 100" preserveAspectRatio="none">
         {[
         [14, 12, 50, 50],
         [78, 8, 50, 50],
@@ -51,29 +75,36 @@ export function HeroVisual() {
           y1={y1}
           x2={x2}
           y2={y2}
-          stroke="rgba(110,86,255,0.28)"
+          className="fx-flow"
+          style={{ animationDuration: `${2.2 + index * 0.3}s` }}
+          stroke="rgba(110,86,255,0.4)"
           strokeWidth="0.25"
-          strokeDasharray="1.6 1.6" />
+          strokeDasharray="1.5 3" />
 
         )}
       </svg>
 
-      {/* Central performance panel */}
+      {/* Central performance panel. Centering lives on the wrapper so it is not
+          overridden by the transform framer-motion writes for the entrance. */}
+      <div className="sm:absolute sm:left-1/2 sm:top-1/2 sm:w-[76%] sm:-translate-x-1/2 sm:-translate-y-1/2">
       <motion.div
         initial={prefersReduced ? undefined : { opacity: 0, y: 14, scale: 0.97 }}
         animate={prefersReduced ? undefined : { opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.1 }}
-        className="absolute left-1/2 top-1/2 w-[76%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-line-strong bg-ink-800/90 p-5 shadow-panel backdrop-blur-xl">
+        className="rounded-xl border border-line-strong bg-ink-800/90 p-5 shadow-panel backdrop-blur-xl">
         
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.14em] text-mist-faint">
-              Growth performance
+            <p className="text-[12px] uppercase tracking-[0.14em] text-mist-faint">
+              Example month online
             </p>
             <p className="mt-1 font-display text-[28px] leading-none text-white">+41%</p>
           </div>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-aqua/30 bg-aqua/10 px-2 py-1 text-[11px] text-aqua">
-            <ActivityIcon className="h-3 w-3" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-aqua/30 bg-aqua/10 px-2 py-1 text-[12px] text-aqua">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-aqua opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-aqua" />
+            </span>
             Live
           </span>
         </div>
@@ -105,33 +136,48 @@ export function HeroVisual() {
             animate={prefersReduced ? undefined : { pathLength: 1 }}
             transition={{ duration: 1.4, ease: [0.23, 1, 0.32, 1], delay: 0.35 }} />
           
+          <circle className="fx fx-pulse" cx="260" cy={92 - 82} r="9" fill="#9483FF" />
           <circle cx="260" cy={92 - 82} r="3.5" fill="#fff" />
         </svg>
 
         <div className="mt-4 grid grid-cols-3 gap-3 border-t border-line pt-4">
           {[
-          { label: 'Visitors', value: '18.4k' },
-          { label: 'Leads', value: '312' },
-          { label: 'Ad Return', value: '3.7x' }].
+          { label: 'Visitors', value: live.visitors.toLocaleString('en-US') },
+          { label: 'Enquiries', value: String(live.enquiries) },
+          { label: 'Return on ads', value: '3.7x' }].
           map((metric) =>
           <div key={metric.label}>
-              <p className="text-[15px] font-medium text-white">{metric.value}</p>
-              <p className="text-[10.5px] uppercase tracking-[0.12em] text-mist-faint">
+              <p className="text-[15px] font-medium tabular-nums text-white">{metric.value}</p>
+              <p className="text-[11.5px] uppercase tracking-[0.12em] text-mist-faint">
                 {metric.label}
               </p>
             </div>
           )}
         </div>
       </motion.div>
+      </div>
 
-      {/* Connected systems */}
+      {/* Connected systems — a simple chip row on phones */}
+      <ul className="mt-4 flex flex-wrap justify-center gap-2 sm:hidden">
+        {nodes.map((node) =>
+        <li
+          key={node.id}
+          className="flex items-center gap-2 rounded-lg border border-line bg-ink-900/85 px-2.5 py-2">
+
+            <node.icon className="h-3.5 w-3.5 text-accent-soft" />
+            <span className="text-[12px] text-mist-dim">{node.label}</span>
+          </li>
+        )}
+      </ul>
+
+      {/* Connected systems — floating around the panel from sm up */}
       {nodes.map((node, index) =>
       <motion.div
         key={node.id}
         initial={prefersReduced ? undefined : { opacity: 0, scale: 0.96 }}
         animate={prefersReduced ? undefined : { opacity: 1, scale: 1 }}
         transition={{ duration: 0.45, delay: 0.5 + index * 0.08, ease: [0.23, 1, 0.32, 1] }}
-        className="absolute"
+        className="absolute hidden sm:block"
         style={{ left: `${node.x}%`, top: `${node.y}%` }}>
         
           <div
@@ -141,7 +187,7 @@ export function HeroVisual() {
           style={{ animationDelay: `${index * 0.9}s` }}>
           
             <node.icon className="h-3.5 w-3.5 text-accent-soft" />
-            <span className="text-[11.5px] text-mist-dim">{node.label}</span>
+            <span className="text-[12px] text-mist-dim">{node.label}</span>
           </div>
         </motion.div>
       )}
@@ -151,11 +197,21 @@ export function HeroVisual() {
         initial={prefersReduced ? undefined : { opacity: 0, y: 10 }}
         animate={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.95 }}
-        className="absolute bottom-[2%] right-0 hidden rounded-lg border border-line bg-ink-900/85 px-3 py-2.5 font-mono text-[10.5px] leading-relaxed text-mist-faint backdrop-blur-md sm:block">
+        className="absolute bottom-[2%] right-0 hidden min-w-[220px] rounded-lg border border-line bg-ink-900/85 px-3 py-2.5 font-mono text-[11.5px] leading-relaxed text-mist-faint backdrop-blur-md sm:block">
         
-        <span className="text-aqua">✓</span> New lead saved
-        <br />
-        <span className="text-accent-soft">from</span> website form · 2s ago
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={live.eventKey}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}>
+
+            <span className="text-aqua">✓</span> {live.event.title}
+            <br />
+            <span className="text-accent-soft">·</span> {live.event.detail}
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
     </div>);
 

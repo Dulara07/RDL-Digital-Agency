@@ -3,46 +3,45 @@ import type { ProcessStep } from '../types';
 export const processSteps: ProcessStep[] = [
 {
   step: '01',
-  title: 'Discover',
-  body: 'Understand the business, goals, customers and challenges — including the constraints nobody writes in a brief.',
-  deliverables: ['Stakeholder interviews', 'Current-state audit', 'Success metrics']
+  title: 'We listen',
+  body: 'A free conversation about your business, your customers and what is holding you back. No technical knowledge needed.',
+  deliverables: ['A call or meeting', 'A look at what you have today', 'Agreed goals']
 },
 {
   step: '02',
-  title: 'Strategize',
-  body: 'Develop a digital and technology roadmap that sequences work by impact rather than by what is easiest to start.',
-  deliverables: ['Roadmap & phasing', 'Channel / systems plan', 'Budget model']
+  title: 'We plan',
+  body: 'We suggest what to do first, what it will cost and how long it will take — starting with whatever pays back soonest.',
+  deliverables: ['A written plan', 'A clear price', 'A timeline']
 },
 {
   step: '03',
-  title: 'Design',
-  body: 'Create the user experience, visual identity and system architecture, validated with the people who will use it.',
-  deliverables: ['UX flows', 'UI design system', 'Technical architecture']
+  title: 'We design',
+  body: 'You see how it will look and work before we build it, and we change it until it feels right to you.',
+  deliverables: ['Designs to review', 'Your feedback built in', 'Your approval before building']
 },
 {
   step: '04',
-  title: 'Build',
-  body: 'Develop the website, software, campaigns and integrations in increments you can review every two weeks.',
-  deliverables: ['Sprint releases', 'QA & accessibility pass', 'Documentation']
+  title: 'We build',
+  body: 'We build it in small steps and show you progress every couple of weeks, so there are no surprises.',
+  deliverables: ['Regular progress updates', 'Testing on phones and computers', 'Simple written guides']
 },
 {
   step: '05',
-  title: 'Launch',
-  body: 'Deploy and activate the solution, train your team, and make sure ownership is clear from day one.',
-  deliverables: ['Deployment & monitoring', 'Team training', 'Handover pack']
+  title: 'We launch and teach you',
+  body: 'We put it live, show your team how to use it, and hand over every login and password — it all belongs to you.',
+  deliverables: ['Go-live', 'Training for your team', 'All logins handed over']
 },
 {
   step: '06',
-  title: 'Optimize',
-  body: 'Measure performance, improve results and scale what works — reviewed against the metrics agreed in discovery.',
-  deliverables: ['Performance reporting', 'Iteration backlog', 'Quarterly planning']
+  title: 'We keep improving',
+  body: 'We check the results every month, explain them in plain words, and improve whatever is not working yet.',
+  deliverables: ['Monthly report', 'Ongoing improvements', 'Support when you need it']
 }];
 
 
 export const approachStages = [
-{ label: 'Understand', detail: 'Business model, workflow, numbers.' },
-{ label: 'Strategize', detail: 'Sequence by impact and budget.' },
-{ label: 'Build', detail: 'Ship in reviewable increments.' },
-{ label: 'Launch', detail: 'Train, document, hand over.' },
-{ label: 'Optimize', detail: 'Measure and improve monthly.' },
-{ label: 'Scale', detail: 'Extend what is proven to work.' }];
+{ label: 'We listen', detail: 'A free chat about your business and goals.' },
+{ label: 'We plan', detail: 'What to do first, the price and the timeline.' },
+{ label: 'We build', detail: 'In small steps, with regular updates.' },
+{ label: 'We launch and teach you', detail: 'Your team learns how to use it.' },
+{ label: 'We keep improving', detail: 'Monthly results explained in plain words.' }];

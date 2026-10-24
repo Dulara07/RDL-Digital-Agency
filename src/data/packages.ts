@@ -1,11 +1,12 @@
 import type { SolutionPackage } from '../types';
 
+// Prices live in data/pricing.ts (packagePrices), keyed by package id.
 export const packages: SolutionPackage[] = [
 {
   id: 'launch',
   name: 'Launch',
-  tagline: 'Get the foundation right, once.',
-  idealFor: 'Businesses starting their digital journey or replacing an outdated website.',
+  tagline: 'Get online properly, the first time.',
+  idealFor: 'Businesses with no website yet, or an old one that brings no enquiries.',
   services: ['Brand basics', 'Website (up to 8 pages)', 'Local SEO setup', 'Analytics & tracking'],
   features: [
   'A planning session to map out your site',
@@ -19,8 +20,8 @@ export const packages: SolutionPackage[] = [
 {
   id: 'growth',
   name: 'Growth',
-  tagline: 'Turn presence into pipeline.',
-  idealFor: 'SMEs looking to increase visibility, enquiries and customers month on month.',
+  tagline: 'Turn your website into a steady flow of customers.',
+  idealFor: 'Businesses that want more enquiries and customers every month.',
   services: ['SEO programme', 'Paid advertising', 'Social & content', 'Monthly reporting'],
   features: [
   'Quarterly growth roadmap',
@@ -34,8 +35,8 @@ export const packages: SolutionPackage[] = [
 {
   id: 'scale',
   name: 'Scale',
-  tagline: 'Remove the operational ceiling.',
-  idealFor: 'Businesses needing technology, automation and advanced digital systems.',
+  tagline: 'Spend less time on paperwork, more on growing.',
+  idealFor: 'Busy businesses held back by spreadsheets, manual work and tools that don’t connect.',
   services: ['Custom software', 'Business automation', 'Customer & stock systems', 'Connecting your tools'],
   features: [
   'A review of how your business runs today',
@@ -49,8 +50,8 @@ export const packages: SolutionPackage[] = [
 {
   id: 'enterprise',
   name: 'Enterprise',
-  tagline: 'A transformation programme, sequenced.',
-  idealFor: 'Organisations undertaking customised technology and digital transformation.',
+  tagline: 'A complete plan for larger businesses, done in stages.',
+  idealFor: 'Larger companies changing how several departments work at once.',
   services: ['Digital strategy', 'Platform engineering', 'Cloud & IT', 'AI solutions'],
   features: [
   'A long-term plan, broken into clear phases',

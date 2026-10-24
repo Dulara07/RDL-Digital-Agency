@@ -1,34 +1,41 @@
 export default {
-  content: ['./**/*.{js,jsx,ts,tsx,html}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
+        // Midnight indigo instead of neutral black: richer, warmer darks.
         ink: {
-          DEFAULT: '#08090C',
-          950: '#06070A',
-          900: '#0A0B10',
-          800: '#0F1117',
-          700: '#151822',
-          600: '#1D212C',
-          500: '#282D3B',
+          DEFAULT: '#0B0A1C',
+          950: '#080716',
+          900: '#0E0D23',
+          800: '#151331',
+          700: '#1D1A3F',
+          600: '#27234F',
+          500: '#363163',
         },
         line: {
-          DEFAULT: 'rgba(255,255,255,0.08)',
-          strong: 'rgba(255,255,255,0.16)',
-          soft: 'rgba(255,255,255,0.04)',
+          DEFAULT: 'rgba(196,186,255,0.11)',
+          strong: 'rgba(196,186,255,0.22)',
+          soft: 'rgba(196,186,255,0.05)',
         },
         mist: {
-          DEFAULT: '#E7E9EF',
-          dim: '#AFB5C4',
-          faint: '#8890A0',
+          DEFAULT: '#EDEBFA',
+          dim: '#C5C3DD',
+          faint: '#AEABCB',
         },
         accent: {
           DEFAULT: '#6E56FF',
-          soft: '#9483FF',
-          deep: '#4B33E0',
+          soft: '#A391FF',
+          deep: '#5338F0',
         },
+        // Friendly secondary colours, used to tell goals and service groups apart.
         aqua: '#3ED8D0',
         gold: '#E8C37A',
+        coral: '#FF7E6B',
+        amber: '#FFBA4A',
+        mint: '#3DDC97',
+        sky: '#56B4FF',
+        rose: '#FF6FB1',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
@@ -37,12 +44,6 @@ export default {
       },
       letterSpacing: {
         tightest: '-0.045em',
-      },
-      maxWidth: {
-        content: [
-  './index.html',
-  './src/**/*.{js,ts,jsx,tsx}'
-],
       },
       transitionTimingFunction: {
         premium: 'cubic-bezier(0.23, 1, 0.32, 1)',
@@ -53,6 +54,7 @@ export default {
       },
       boxShadow: {
         glow: '0 0 0 1px rgba(110,86,255,0.35), 0 18px 60px -20px rgba(110,86,255,0.55)',
+        'glow-lg': '0 20px 70px -25px rgba(110,86,255,0.7)',
         panel: '0 30px 80px -40px rgba(0,0,0,0.9)',
       },
       keyframes: {

@@ -1,53 +1,56 @@
 import type { Faq } from '../types';
+import { formatRupees, servicePrices } from './pricing';
+
+const from = (slug: string) => formatRupees(servicePrices[slug].from);
 
 export const generalFaqs: Faq[] = [
 {
-  question: 'What services does your agency provide?',
+  question: 'I’m not technical. Is that a problem?',
   answer:
-  'Two things, really. First, helping people find and choose you — through your website, search engines, social media, ads, content and branding. Second, building the systems behind the scenes — websites, online stores, custom software, apps, and tools for managing customers, stock and finances — plus keeping it all running with cloud hosting and IT support.'
+  'Not at all — most of our clients aren’t. You tell us about your business in your own words, and we explain every suggestion in plain language. You will never be asked to make a decision you don’t understand.'
+},
+{
+  question: 'What exactly do you do?',
+  answer:
+  'Two things. First, we help customers find and choose you: your website, showing up on Google, Facebook and Instagram, advertising and your logo and branding. Second, we build tools that make your business easier to run: online shops, systems for customers and stock, and automating repetitive paperwork. We also keep your website, email and computers running.'
+},
+{
+  question: 'How much does it cost?',
+  answer:
+  `Every service shows a starting price. For example, a business website starts from ${from('web-development')}, showing up on Google (SEO) from ${from('seo')} a month and an online shop from ${from('ecommerce')}. After a free conversation we send a fixed written quote, so you know the full price before any work begins — no hidden costs. Advertising budgets you pay to Google or Facebook are always separate and stay under your control.`
 },
 {
   question: 'Do you work with small businesses?',
   answer:
-  'Small and medium businesses are our core client. Scopes are phased so you can start with one high-impact piece of work and expand once it pays back, rather than committing to a large programme upfront.'
+  'Yes — small and medium businesses are who we work with most. You can start with one small piece of work, see it pay back, and only then decide whether to do more.'
 },
 {
-  question: 'Can you handle both marketing and software development?',
+  question: 'How long does a website take?',
   answer:
-  'Yes, and that is usually where the advantage is. The same team that builds your website or system also runs the campaigns pointing at it, so tracking, messaging and data model are designed together.'
+  'A normal business website usually takes 4–6 weeks. An online shop takes 6–10 weeks, depending on how many products you have. We confirm the timeline once we understand what you need.'
 },
 {
-  question: 'How long does a website project take?',
+  question: 'Will I be able to update the website myself?',
   answer:
-  'A focused business website typically takes 4–6 weeks. E-commerce builds run 6–10 weeks depending on catalogue and integrations. We confirm timelines after discovery, not before.'
+  'Yes. We show you how to change text, photos and prices yourself. If you would rather not, a monthly care plan covers updates, backups and security for you.'
 },
 {
-  question: 'Can you maintain our website after launch?',
+  question: 'Do I own my website and accounts?',
   answer:
-  'Yes. Maintenance plans cover hosting, updates, backups, monitoring, security patching and a monthly allowance of content or development changes with agreed response times.'
+  'Yes. Your website, domain name, Google and Facebook accounts are set up in your business’s name, and we hand over every login. You are never locked in to us.'
 },
 {
-  question: 'Do you provide custom software?',
+  question: 'Can you help with Google and Facebook advertising every month?',
   answer:
-  'Yes. When ready-made software does not fit how your business works, we build web and mobile apps for you — internal tools, customer portals, systems for managing customers, stock or sales, and tools that automate repetitive tasks.'
+  'Yes. We usually start with a 3-month plan to set things up and learn what works for your business, then continue month by month. Every month you get a short report showing what you spent and the enquiries it brought in.'
 },
 {
-  question: 'Can you integrate existing systems?',
+  question: 'Can you connect the software we already use?',
   answer:
-  'Yes, and most projects involve this. We connect your accounting software, payment providers, point-of-sale systems, online marketplaces and delivery partners so they all talk to each other automatically, and we keep an eye on every connection to make sure it keeps working.'
+  'Usually, yes. We can link your accounting software, payment providers, billing (POS) system and delivery services so information moves between them automatically — no more typing the same details twice.'
 },
 {
-  question: 'Do you offer monthly digital marketing?',
+  question: 'How do we start?',
   answer:
-  'Yes. Retainers usually begin with a 90-day sprint to establish tracking and baseline performance, then continue monthly with an agreed scope and a performance review call.'
-},
-{
-  question: 'Can you work with international clients?',
-  answer:
-  'We work across time zones with clients in Asia, the Middle East, Europe and North America. Projects run on scheduled calls, shared boards and written updates so progress never depends on being online at the same time.'
-},
-{
-  question: 'How do we start a project?',
-  answer:
-  'Send an enquiry or book a consultation. We run a short discovery call, share an outline of approach and indicative investment, and only then propose a scope. There is no cost until you approve a scope.'
+  'Send us a message through the form or on WhatsApp. We have a free conversation about your business, then send a simple written plan with a price. Nothing is charged until you agree to it.'
 }];

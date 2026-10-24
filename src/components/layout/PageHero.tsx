@@ -24,7 +24,7 @@ export function PageHero({ kicker, title, intro, actions, aside }: PageHeroProps
           className={aside ? 'grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end' : ''}>
           
           <div className="flex flex-col gap-6">
-            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent-soft">
+            <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-accent-soft">
               {kicker}
             </span>
             <h1 className="max-w-3xl text-balance text-[clamp(2.1rem,5vw,3.9rem)] font-semibold leading-[1.04] tracking-tightest text-white">

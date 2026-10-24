@@ -24,7 +24,7 @@ export function BlogCard({ post }: {post: Post;}) {
             className="aspect-[3/2] w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-[1.03]" />
           
         </div>
-        <div className="flex items-center gap-2 text-[11.5px] uppercase tracking-[0.12em] text-mist-faint">
+        <div className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-mist-faint">
           <span className="text-accent-soft">{post.category}</span>
           <span aria-hidden="true">·</span>
           <time dateTime={post.date}>{formatDate(post.date)}</time>

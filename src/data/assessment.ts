@@ -11,24 +11,24 @@ import type { AssessmentArea, AssessmentQuestion } from '../types';
 export const assessmentQuestions: AssessmentQuestion[] = [
 {
   id: 'business-type',
-  question: 'What type of business do you operate?',
+  question: 'What kind of business do you run?',
   helper: 'This shapes which channels and systems are worth prioritising.',
   options: [
-  { label: 'Retail or e-commerce', areas: ['website', 'marketing', 'analytics'] },
+  { label: 'Shop or online store', areas: ['website', 'marketing', 'analytics'] },
   { label: 'Manufacturing or trading', areas: ['website', 'software', 'seo'] },
-  { label: 'Services or consultancy', areas: ['seo', 'marketing', 'automation'] },
-  { label: 'Hospitality or food', areas: ['website', 'marketing', 'automation'] }]
+  { label: 'Services (salon, clinic, tuition, consulting…)', areas: ['seo', 'marketing', 'automation'] },
+  { label: 'Hotel, restaurant or food', areas: ['website', 'marketing', 'automation'] }]
 
 },
 {
   id: 'challenge',
-  question: 'What is your biggest digital challenge right now?',
+  question: 'What is your biggest problem right now?',
   helper: 'Pick the one that costs you the most today.',
   options: [
-  { label: 'Not enough enquiries', areas: ['marketing', 'seo'] },
-  { label: 'Too much manual work', areas: ['automation', 'software'] },
-  { label: 'Systems that do not talk to each other', areas: ['software', 'automation'] },
-  { label: 'No clarity on what is working', areas: ['analytics'] }]
+  { label: 'Not enough customers or enquiries', areas: ['marketing', 'seo'] },
+  { label: 'Too much paperwork and manual work', areas: ['automation', 'software'] },
+  { label: 'Typing the same information into different places', areas: ['software', 'automation'] },
+  { label: 'Not sure what is working and what isn’t', areas: ['analytics'] }]
 
 },
 {
@@ -37,39 +37,39 @@ export const assessmentQuestions: AssessmentQuestion[] = [
   helper: 'Be honest about its current condition.',
   options: [
   { label: 'No website yet', areas: ['website', 'seo'] },
-  { label: 'Yes, but it is outdated', areas: ['website', 'seo'] },
-  { label: 'Yes, and it performs well', areas: ['marketing'] }]
+  { label: 'Yes, but it is old or rarely updated', areas: ['website', 'seo'] },
+  { label: 'Yes, and it brings in customers', areas: ['marketing'] }]
 
 },
 {
   id: 'advertising',
-  question: 'Are you currently running digital advertising?',
+  question: 'Do you advertise on Facebook, Instagram or Google?',
   helper: 'Paid channels only — organic comes later.',
   options: [
   { label: 'Not at all', areas: ['marketing'] },
-  { label: 'Occasionally, without a plan', areas: ['marketing', 'analytics'] },
-  { label: 'Yes, managed monthly', areas: ['analytics'] }]
+  { label: 'Sometimes — I boost the odd post', areas: ['marketing', 'analytics'] },
+  { label: 'Yes, every month', areas: ['analytics'] }]
 
 },
 {
   id: 'software',
-  question: 'Do you use business software today?',
+  question: 'How do you keep track of sales, stock and customers?',
   helper: 'Accounting, customer records, stock tracking or similar tools.',
   options: [
-  { label: 'Mostly spreadsheets', areas: ['software', 'automation'] },
-  { label: 'A few disconnected tools', areas: ['software', 'automation', 'analytics'] },
-  { label: 'An integrated system already', areas: ['analytics'] }]
+  { label: 'Notebooks or Excel', areas: ['software', 'automation'] },
+  { label: 'A few different apps that don’t connect', areas: ['software', 'automation', 'analytics'] },
+  { label: 'One system that does it all', areas: ['analytics'] }]
 
 },
 {
   id: 'goals',
-  question: 'What are your growth goals for the next 12 months?',
+  question: 'What do you want most in the next 12 months?',
   helper: 'Where the investment should ultimately show up.',
   options: [
-  { label: 'More customers and revenue', areas: ['marketing', 'seo', 'website'] },
-  { label: 'Lower operating cost', areas: ['automation', 'software'] },
-  { label: 'Enter new markets', areas: ['website', 'seo', 'marketing'] },
-  { label: 'Better control and reporting', areas: ['analytics', 'software'] }]
+  { label: 'More customers and sales', areas: ['marketing', 'seo', 'website'] },
+  { label: 'Lower costs and less admin', areas: ['automation', 'software'] },
+  { label: 'Reach new areas or sell overseas', areas: ['website', 'seo', 'marketing'] },
+  { label: 'Clearer numbers on how the business is doing', areas: ['analytics', 'software'] }]
 
 }];
 
@@ -78,36 +78,36 @@ export const assessmentAreas: AssessmentArea[] = [
 {
   id: 'website',
   label: 'Website',
-  description: 'A faster, clearer site built to convert the traffic you already get.',
+  description: 'A clear, fast website that turns visitors into calls and messages.',
   icon: GlobeIcon
 },
 {
   id: 'marketing',
-  label: 'Marketing',
-  description: 'A channel plan with tracking, so spend can be judged on returns.',
+  label: 'Online marketing',
+  description: 'A simple plan for Facebook, Instagram and Google ads, so you can see what your money brings back.',
   icon: MegaphoneIcon
 },
 {
   id: 'seo',
-  label: 'SEO',
-  description: 'Free visibility on Google for the words your customers actually search.',
+  label: 'Showing up on Google (SEO)',
+  description: 'Appear on Google Search and Maps when nearby customers look for what you sell — without paying per click.',
   icon: SearchIcon
 },
 {
   id: 'automation',
-  label: 'Automation',
-  description: 'Repetitive admin removed from your team’s week.',
+  label: 'Less paperwork (automation)',
+  description: 'Invoices, reminders and reports handled automatically, so your team gets hours back each week.',
   icon: WorkflowIcon
 },
 {
   id: 'software',
-  label: 'Software',
-  description: 'Systems shaped around your workflow instead of around a template.',
+  label: 'Business software',
+  description: 'One simple system for customers, stock and sales, built around how you already work.',
   icon: CodeIcon
 },
 {
   id: 'analytics',
-  label: 'Analytics',
-  description: 'Clear reports that help you make decisions with confidence.',
+  label: 'Clear reports',
+  description: 'A simple monthly report showing visitors, enquiries and sales, in plain words.',
   icon: BarChart3Icon
 }];

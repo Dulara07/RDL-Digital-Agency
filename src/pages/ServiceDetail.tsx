@@ -1,5 +1,8 @@
 import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { PriceTag } from '../components/ui/PriceTag';
+import { pricingPromise, servicePrices } from '../data/pricing';
+import { NotFound } from './NotFound';
 import { CheckIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { PageHero } from '../components/layout/PageHero';
@@ -9,20 +12,17 @@ import { Button } from '../components/ui/Button';
 import { TechnologyBadge } from '../components/ui/TechnologyBadge';
 import { FAQAccordion } from '../components/sections/FAQAccordion';
 import { PortfolioCard } from '../components/cards/PortfolioCard';
-import { CaseStudyModal } from '../components/sections/CaseStudyModal';
 import { ContactSection } from '../components/sections/ContactSection';
 import { CTASection } from '../components/sections/CTASection';
 import { getServiceDetail } from '../data/serviceDetails';
 import { getCaseStudies } from '../data/work';
 import { site } from '../data/site';
-import type { CaseStudy } from '../types';
 
 export function ServiceDetail() {
   const { slug = '' } = useParams();
   const detail = getServiceDetail(slug);
-  const [active, setActive] = React.useState<CaseStudy | null>(null);
 
-  if (!detail) return <Navigate to="/services" replace />;
+  if (!detail) return <NotFound />;
 
   const studies = getCaseStudies(detail.caseStudySlugs);
 
@@ -68,12 +68,19 @@ export function ServiceDetail() {
         actions={
         <>
             <Button to="/contact" size="lg" withArrow>
-              Discuss Your Business
+              Start a Project
             </Button>
             <Button to="/work" size="lg" variant="secondary">
               Related Work
             </Button>
           </>
+        }
+        aside={
+        <div className="rounded-2xl border border-accent/30 bg-accent/[0.07] p-7">
+            <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-accent-soft">Price</p>
+            <PriceTag price={servicePrices[detail.slug]} size="lg" className="mt-3" />
+            <p className="mt-5 border-t border-line pt-5 text-[14px] leading-relaxed text-mist-dim">{pricingPromise}</p>
+          </div>
         } />
       
 
@@ -89,7 +96,7 @@ export function ServiceDetail() {
               delay={Math.min(index * 0.05, 0.2)}
               className="flex items-baseline gap-5 border-t border-line py-4 last:border-b">
               
-                <span className="font-mono text-[11.5px] text-mist-faint/70">
+                <span className="font-mono text-[12px] text-mist-faint/70">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="text-[14.5px] leading-relaxed text-mist-dim">{point}</span>
@@ -115,7 +122,7 @@ export function ServiceDetail() {
               delay={index * 0.05}
               className="flex flex-col gap-3 bg-ink-900 p-7">
               
-                <span className="font-mono text-[11.5px] text-accent">
+                <span className="font-mono text-[12px] text-accent">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className="text-[17px] font-medium tracking-tight text-white">{pillar.title}</h3>
@@ -176,7 +183,7 @@ export function ServiceDetail() {
 
           <div className="flex flex-col gap-10">
             <div>
-              <h2 className="text-[11px] font-medium uppercase tracking-[0.18em] text-accent-soft">
+              <h2 className="text-[12px] font-medium uppercase tracking-[0.18em] text-accent-soft">
                 Technology
               </h2>
               <ul className="mt-5 flex flex-wrap gap-1.5">
@@ -189,7 +196,7 @@ export function ServiceDetail() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-medium uppercase tracking-[0.18em] text-accent-soft">
+              <h2 className="text-[12px] font-medium uppercase tracking-[0.18em] text-accent-soft">
                 Business benefits
               </h2>
               <ul className="mt-5 flex flex-col gap-4">
@@ -240,12 +247,11 @@ export function ServiceDetail() {
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {studies.map((study) =>
             <Reveal key={study.slug}>
-                <PortfolioCard study={study} onOpen={() => setActive(study)} />
+                <PortfolioCard study={study} />
               </Reveal>
             )}
           </div>
         </div>
-        <CaseStudyModal study={active} onClose={() => setActive(null)} />
       </section>
 
       {/* FAQ */}
@@ -262,9 +268,9 @@ export function ServiceDetail() {
         eyebrow="Next step"
         title={`Let’s talk about ${detail.name.toLowerCase()}.`}
         body="A short call is enough to establish whether this is the right investment for you right now."
-        primaryLabel="Talk to an Expert"
+        primaryLabel="Start a Project"
         secondaryLabel="See Our Process"
-        secondaryTo="/about" />
+        secondaryTo="/services#process-heading" />
       
       <ContactSection />
     </>);

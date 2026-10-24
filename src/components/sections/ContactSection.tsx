@@ -38,7 +38,7 @@ export function ContactSection() {
               <li className="flex gap-3.5">
                 <ClockIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true" />
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-[11px] uppercase tracking-[0.14em] text-mist-faint">
+                  <span className="text-[12px] uppercase tracking-[0.14em] text-mist-faint">
                     Business hours
                   </span>
                   {site.hours.map((entry) =>
@@ -68,7 +68,7 @@ function ContactRow({ icon: Icon, label, value, href }: ContactRowProps) {
     <li className="flex gap-3.5">
       <Icon className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true" />
       <div className="flex flex-col gap-1">
-        <span className="text-[11px] uppercase tracking-[0.14em] text-mist-faint">{label}</span>
+        <span className="text-[12px] uppercase tracking-[0.14em] text-mist-faint">{label}</span>
         {href ?
         <a
           href={href}

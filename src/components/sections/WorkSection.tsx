@@ -2,9 +2,13 @@ import React, { useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { SectionHeading } from '../ui/SectionHeading';
 import { PortfolioCard } from '../cards/PortfolioCard';
-import { CaseStudyModal } from './CaseStudyModal';
 import { caseStudies, workFilters } from '../../data/work';
-import type { CaseStudy, WorkCategory } from '../../types';
+import type { WorkCategory } from '../../types';
+
+// Only offer filters that have at least one case study behind them.
+const availableFilters = workFilters.filter(
+  (item) => item.id === 'all' || caseStudies.some((study) => study.category === item.id)
+);
 
 interface WorkSectionProps {
   limit?: number;
@@ -16,13 +20,12 @@ interface WorkSectionProps {
 
 export function WorkSection({
   limit,
-  heading = 'Work that creates business impact',
-  eyebrow = 'Selected work',
-  subtitle = 'Six engagements across retail, manufacturing, trading and hospitality. Filter by the kind of work you need.',
+  heading = 'Businesses we have helped',
+  eyebrow = 'Our work',
+  subtitle = 'Websites, marketing programmes and business software for companies across Sri Lanka and beyond. Filter by the kind of work you need.',
   featureFirst = true
 }: WorkSectionProps) {
   const [filter, setFilter] = useState<'all' | WorkCategory>('all');
-  const [active, setActive] = useState<CaseStudy | null>(null);
   const prefersReduced = useReducedMotion();
 
   const visible = useMemo(() => {
@@ -31,6 +34,13 @@ export function WorkSection({
     return limit ? filtered.slice(0, limit) : filtered;
   }, [filter, limit]);
 
+  // Wide cards fill the full row: the lead card when featuring, plus a trailing
+  // card that would otherwise sit alone next to an empty cell.
+  const leadIsWide = featureFirst && filter === 'all';
+  const halfWidthCount = visible.length - (leadIsWide ? 1 : 0);
+  const isWide = (index: number) =>
+  leadIsWide && index === 0 || halfWidthCount % 2 === 1 && index === visible.length - 1;
+
   return (
     <section aria-labelledby="work-heading" className="relative">
       <div className="shell py-20 md:py-28">
@@ -38,14 +48,14 @@ export function WorkSection({
           eyebrow={eyebrow}
           title={<span id="work-heading">{heading}</span>}
           subtitle={subtitle} />
-        
+
 
         <div
           role="group"
           aria-label="Filter case studies"
           className="mt-10 flex flex-wrap gap-2 border-t border-line pt-8">
-          
-          {workFilters.map((item) => {
+
+          {availableFilters.map((item) => {
             const isActive = filter === item.id;
             return (
               <button
@@ -59,7 +69,7 @@ export function WorkSection({
                 'border-accent bg-accent text-white' :
                 'border-line text-mist-dim hover:border-line-strong hover:text-white'].
                 join(' ')}>
-                
+
                 {item.label}
               </button>);
 
@@ -80,13 +90,9 @@ export function WorkSection({
                 delay: Math.min(index * 0.03, 0.15),
                 ease: [0.23, 1, 0.32, 1]
               }}
-              className={featureFirst && index === 0 && filter === 'all' ? 'lg:col-span-2' : ''}>
-              
-                <PortfolioCard
-                study={study}
-                onOpen={() => setActive(study)}
-                featured={featureFirst && index === 0 && filter === 'all'} />
-              
+              className={isWide(index) ? 'lg:col-span-2' : ''}>
+
+                <PortfolioCard study={study} featured={isWide(index)} />
               </motion.div>
             )}
           </AnimatePresence>
@@ -98,8 +104,6 @@ export function WorkSection({
           </p>
         }
       </div>
-
-      <CaseStudyModal study={active} onClose={() => setActive(null)} />
     </section>);
 
 }

@@ -115,7 +115,9 @@ async function main() {
       await writePage(route, html);
     }
 
-    const sitemap = buildSitemap(pages.map((p) => p.route));
+    // Pages marked noindex (legal, 404) stay out of the sitemap.
+    const indexable = pages.filter((p) => !/<meta name="robots" content="noindex/.test(p.html));
+    const sitemap = buildSitemap(indexable.map((p) => p.route));
     await writeFile(join(DIST, 'sitemap.xml'), sitemap, 'utf8');
 
     console.log(`[prerender] wrote ${pages.length} static pages + sitemap.xml`);

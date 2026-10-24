@@ -42,7 +42,7 @@ type Props = LinkProps | AnchorProps | ButtonProps;
 
 const variants: Record<Variant, string> = {
   primary:
-  'bg-accent text-white border border-accent hover:bg-accent-deep hover:border-accent-deep',
+  'btn-sheen bg-gradient-to-r from-accent via-[#7C5CFF] to-[#9B5CFF] text-white border border-white/10 shadow-[0_8px_30px_-12px_rgba(110,86,255,0.85)] hover:brightness-110 hover:shadow-[0_12px_40px_-10px_rgba(124,92,255,1)]',
   secondary:
   'bg-white/[0.04] text-mist border border-line-strong hover:bg-white/[0.08] hover:border-white/30',
   ghost: 'bg-transparent text-mist-dim border border-transparent hover:text-white'
@@ -65,7 +65,7 @@ export function Button({
 }: Props) {
   const classes = [
   'group relative inline-flex items-center justify-center rounded-full font-medium tracking-tight',
-  'transition-[background-color,border-color,color,transform,box-shadow] duration-200 ease-premium',
+  'transition-[background-color,border-color,color,transform,box-shadow,filter] duration-200 ease-premium hover:-translate-y-px',
   'active:translate-y-px disabled:opacity-50 disabled:pointer-events-none',
   variants[variant],
   sizes[size],
@@ -96,8 +96,13 @@ export function Button({
   }
 
   if ('href' in rest && rest.href) {
+    // Only web links open a new tab; mailto:/tel: hand off to the OS directly.
+    const external = /^https?:\/\//.test(rest.href);
     return (
-      <a href={rest.href} className={classes} target="_blank" rel="noreferrer">
+      <a
+        href={rest.href}
+        className={classes}
+        {...external ? { target: '_blank', rel: 'noreferrer' } : {}}>
         {content}
       </a>);
 

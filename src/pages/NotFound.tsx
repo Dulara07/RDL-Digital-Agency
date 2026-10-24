@@ -29,7 +29,7 @@ export function NotFound() {
               Back to Home
             </Button>
             <Button to="/contact" size="lg" variant="secondary">
-              Contact Us
+              Start a Project
             </Button>
           </div>
         </div>

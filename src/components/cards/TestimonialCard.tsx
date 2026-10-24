@@ -8,7 +8,7 @@ export function TestimonialCard({ testimonial }: {testimonial: Testimonial;}) {
       <div
         className="flex items-center gap-1"
         role="img"
-        aria-label={`Illustrative satisfaction indicator: ${testimonial.score} of 5`}>
+        aria-label={`Rated ${testimonial.score} out of 5`}>
         
         {Array.from({ length: 5 }).map((_, index) =>
         <StarIcon

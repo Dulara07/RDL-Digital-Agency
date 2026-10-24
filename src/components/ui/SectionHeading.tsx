@@ -36,7 +36,7 @@ export function SectionHeading({
       
       <div className={['flex flex-col gap-4', isCenter ? 'items-center' : 'max-w-2xl'].join(' ')}>
         {eyebrow &&
-        <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-accent-soft">
+        <span className="text-gradient w-fit text-[12px] font-semibold uppercase tracking-[0.18em]">
             {eyebrow}
           </span>
         }
